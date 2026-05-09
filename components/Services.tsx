@@ -216,6 +216,7 @@ export default function Services() {
                     ))}
                   </ul>
 
+
                   {/* Learn more link */}
                   <div className="mt-auto pt-6 border-t transition-colors duration-300" style={{ borderColor: isHovered ? 'rgba(255,255,255,0.2)' : 'rgba(229,231,235,1)' }}>
                     <a

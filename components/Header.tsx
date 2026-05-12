@@ -33,17 +33,7 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="MD Mechatronica"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300"
-              style={{
-                filter: isScrolled ? 'none' : 'brightness(0) invert(1)',
-              }}
-            />
-          </a>
-
+              <Image src="/logo.png" alt="MD Mechatronica" width={100} height={100} className="h-16 md:h-20 w-auto object-contain transition-all duration-300" style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }} />
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
@@ -83,7 +73,10 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            type="button"
             className={`lg:hidden p-2 ${isScrolled ? 'text-dark' : 'text-white'}`}
+            aria-controls="mobile-menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

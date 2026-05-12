@@ -3,8 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "MD Mechatronica - Professional Printing Machine Service",
-  description: "Expert installation, maintenance, and repair services for Müller Martini, Kolbus, and Hörauf printing machines. Professional machinery service across Europe.",
-  keywords: "printing machine service, Müller Martini, Kolbus, Hörauf, machine installation, industrial maintenance",
+  description:
+    "Expert installation, maintenance, and repair services for Müller Martini, Kolbus, and Hörauf printing machines. Professional machinery service across Europe.",
+  keywords:
+    "printing machine service, Müller Martini, Kolbus, Hörauf, machine installation, industrial maintenance",
 };
 
 export default function RootLayout({
@@ -14,9 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans">
-        {children}
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

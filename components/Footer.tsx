@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,26 +24,6 @@ export default function Footer() {
               Leading provider of industrial machinery installation, maintenance, and repair services. 
               Specialized in Müller Martini, Kolbus, and Hörauf printing equipment.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -67,15 +47,6 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">Contact Info</h4>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="text-gray-400 text-sm mb-1">Phone</p>
-                  <a href="tel:+48666211626" className="text-white hover:text-secondary transition-colors">
-                    +48 666 211 626
-                  </a>
-                </div>
-              </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                 <div>
@@ -106,18 +77,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm text-center md:text-left">
+          <div className="flex justify-center items-center">
+            <p className="text-gray-400 text-sm text-center">
               © {currentYear} MD Mechatronica Michał Dudek. All rights reserved. NIP: 5272245741
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-secondary transition-colors">
-                Terms of Service
-              </a>
-            </div>
           </div>
         </div>
       </div>

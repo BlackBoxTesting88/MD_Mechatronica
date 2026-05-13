@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Header() {
@@ -54,15 +54,6 @@ export default function Header() {
           {/* Contact Info */}
           <div className="hidden xl:flex items-center space-x-6">
             <a
-              href="tel:+48666211626"
-              className={`flex items-center space-x-2 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+48 666 211 626</span>
-            </a>
-            <a
               href="mailto:office@md-mechatronica.com"
               className="btn-primary text-sm py-3 px-6"
             >
@@ -97,13 +88,6 @@ export default function Header() {
                 </a>
               ))}
               <div className="pt-4 border-t border-gray-200 space-y-3">
-                <a
-                  href="tel:+48666211626"
-                  className="flex items-center space-x-2 text-gray-700"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm">+48 666 211 626</span>
-                </a>
                 <a
                   href="mailto:office@md-mechatronica.com"
                   className="flex items-center space-x-2 text-gray-700"

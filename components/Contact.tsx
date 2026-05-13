@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Mail, MapPin, Clock, Send, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
@@ -188,22 +188,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="bg-gradient-to-br from-secondary/20 to-secondary/5 backdrop-blur-lg border border-secondary/30 rounded-2xl p-8">
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* Phone */}
-                <div className="flex flex-col items-center text-center group">
-                  <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-secondary transition-all duration-300">
-                    <Phone className="w-7 h-7 text-secondary group-hover:text-white transition-colors" />
-                  </div>
-                  <p className="text-gray-400 text-sm mb-2">Call Us Directly</p>
-                  <a
-                    href="tel:+48666211626"
-                    className="text-white text-xl font-bold hover:text-secondary transition-colors"
-                  >
-                    +48 666 211 626
-                  </a>
-                  <p className="text-gray-400 text-xs mt-2">Available 24/7 for emergencies</p>
-                </div>
-
+              <div className="grid md:grid-cols-2 gap-8">
                 {/* Email */}
                 <div className="flex flex-col items-center text-center group">
                   <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition-all duration-300">
@@ -244,13 +229,9 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center space-x-2 text-gray-300">
-            <span>Need immediate assistance?</span>
-            <a href="tel:+48666211626" className="text-secondary font-bold hover:underline inline-flex items-center">
-              Call us now
-              <ArrowRight className="w-4 h-4 ml-1" />
-            </a>
-          </div>
+          <p className="text-gray-300">
+            Need immediate assistance? Scan the QR code above to call us directly.
+          </p>
         </motion.div>
       </div>
     </section>

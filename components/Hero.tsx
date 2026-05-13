@@ -3,39 +3,46 @@
 import { ArrowRight, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
-// Hero Background Slideshow
+/** Public folder paths — stable reference, no effect needed to “hydrate” the list */
+const HERO_SLIDES = [
+  '/images/mechanical-engineering-project.webp',
+  '/images/futuristic-machinery-in-production-line.webp',
+  '/images/thorium-APO0TCVHBv0-unsplash.jpg',
+] as const;
+
 function HeroBackgroundSlideshow() {
-  const images = [
-    '/images/mechanical-engineering-project.webp',
-    '/images/futuristic-machinery-in-production-line.webp',
-    '/images/thorium-APO0TCVHBv0-unsplash.jpg',
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // 5 sekundi
+      setCurrentIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, []);
 
   return (
     <div className="absolute inset-0">
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${images[currentIndex]}')`,
-          }}
-        />
+          className="absolute inset-0"
+        >
+          <Image
+            src={HERO_SLIDES[currentIndex]}
+            alt=""
+            fill
+            className="object-cover brightness-50"
+            sizes="100vw"
+            priority={currentIndex === 0}
+          />
+        </motion.div>
       </AnimatePresence>
     </div>
   );

@@ -14,6 +14,20 @@
   }
 }
 
+@layer utilities {
+  @keyframes hero-enter {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
 @layer components {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -53,5 +67,9 @@
 
   .gradient-overlay {
     @apply absolute inset-0 bg-gradient-to-r from-dark/90 to-dark/70;
+  }
+
+  .hero-enter {
+    animation: hero-enter 0.8s ease-out both;
   }
 }

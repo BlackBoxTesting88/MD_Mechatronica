@@ -1,6 +1,7 @@
-'use client';
 
 import { Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import logo from '@/public/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,8 +14,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <img
-                src="/logo.png"
+              <Image
+                src={logo}
                 alt="MD Mechatronica"
                 className="h-16 w-auto object-contain mb-4"
                 style={{ filter: 'brightness(0) invert(1)' }}
@@ -35,6 +36,7 @@ export default function Footer() {
                   <a
                     href={`#${link.toLowerCase()}`}
                     className="text-gray-400 hover:text-secondary transition-colors"
+                    aria-label={`Go to ${link} section`}
                   >
                     {link}
                   </a>
@@ -48,19 +50,20 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Contact Info</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                <Mail className="w-5 h-5 text-secondary flex-shrink-0 mt-1" aria-label="Email" />
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Email</p>
                   <a
                     href="mailto:office@md-mechatronica.com"
                     className="text-white hover:text-secondary transition-colors break-all"
+                    aria-label="Email: office@md-mechatronica.com"
                   >
                     office@md-mechatronica.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-1" aria-label="Address" />
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Address</p>
                   <p className="text-white">

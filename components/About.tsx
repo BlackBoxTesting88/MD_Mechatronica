@@ -1,7 +1,12 @@
 'use client';
 
-import { CheckCircle, Award, Users, Target } from 'lucide-react';
+import { CheckCircle, Award} from 'lucide-react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import mullerMartiniDiamantMc30 from '@/public/images/muller-martini-diamant-mc-30.webp';
+import futuristicMachineryInProductionLine from '@/public/images/futuristic-machinery-in-production-line.webp';
+import thoriumAPO0TCVHBv0Unsplash from '@/public/images/thorium-APO0TCVHBv0-unsplash.jpg';
+import shaminKmrzmnXJJ5oAZmnlIUnsplash from '@/public/images/shamin-kmrzmn-XJJ5oAZmnlI-unsplash.jpg';
 
 export default function About() {
   return (
@@ -65,13 +70,13 @@ export default function About() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" aria-label={feature} />
                   <span className="text-gray-700">{feature}</span>
                 </motion.div>
               ))}
             </div>
 
-            <a href="#contact" className="btn-primary inline-block">
+            <a href="#contact" className="btn-primary inline-block" aria-label="Go to contact section">
               Work With Us
             </a>
           </motion.div>
@@ -87,15 +92,16 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="h-48 bg-gradient-to-br from-primary to-primary-dark rounded-xl overflow-hidden">
-                  <img
-                    src="/images/muller-martini-diamant-mc-30.webp"
+                  <Image
+                    src={mullerMartiniDiamantMc30}
                     alt="Industrial machinery"
                     className="w-full h-full object-cover"
+
                   />
                 </div>
                 <div className="h-64 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl overflow-hidden">
-                  <img
-                    src="/images/futuristic-machinery-in-production-line.webp"
+                  <Image
+                    src={futuristicMachineryInProductionLine}
                     alt="Futuristic production line"
                     className="w-full h-full object-cover"
                   />
@@ -103,15 +109,15 @@ export default function About() {
               </div>
               <div className="space-y-4 pt-8">
                 <div className="h-64 bg-gradient-to-br from-primary-dark to-primary rounded-xl overflow-hidden">
-                  <img
-                    src="/images/thorium-APO0TCVHBv0-unsplash.jpg"
+                  <Image
+                    src={thoriumAPO0TCVHBv0Unsplash}
                     alt="Technical service"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="h-48 bg-gradient-to-br from-secondary-dark to-secondary rounded-xl overflow-hidden">
-                  <img
-                    src="/images/shamin-kmrzmn-XJJ5oAZmnlI-unsplash.jpg"
+                  <Image
+                    src={shaminKmrzmnXJJ5oAZmnlIUnsplash}
                     alt="Installation work"
                     className="w-full h-full object-cover"
                   />
@@ -123,11 +129,11 @@ export default function About() {
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 border-4 border-secondary">
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
-                  <Award className="w-8 h-8 text-secondary" />
+                  <Award className="w-8 h-8 text-secondary" aria-label="ISO Certified" />
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-dark">ISO</h4>
-                  <p className="text-sm text-gray-600">Certified</p>
+                  <p className="text-sm text-gray-600" aria-label="Certified">Certified</p>
                 </div>
               </div>
             </div>

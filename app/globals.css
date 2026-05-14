@@ -72,4 +72,10 @@
   .hero-enter {
     animation: hero-enter 0.8s ease-out both;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-enter {
+      animation: none;
+    }
+  }
 }

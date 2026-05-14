@@ -30,15 +30,20 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="#contact" className="btn-primary inline-flex items-center space-x-2">
+            <a
+              href="#contact"
+              className="btn-primary inline-flex items-center space-x-2"
+              aria-label="Get started — go to the contact section"
+            >
               <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </a>
             <a
               href="#services"
               className="btn-outline bg-white/10 border-white text-white hover:bg-white hover:text-dark inline-flex items-center space-x-2"
+              aria-label="View our services section"
             >
-              <Play className="w-5 h-5" />
+              <Play className="w-5 h-5" aria-hidden="true" />
               <span>Our Services</span>
             </a>
           </div>

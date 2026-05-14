@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const projects = [
@@ -76,10 +77,13 @@ function ProjectModal({ project, isOpen, onClose }: { project: typeof projects[0
 
               {/* Image */}
               <div className="relative h-48 md:h-96 overflow-hidden rounded-t-2xl md:rounded-t-3xl">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={1000}
+                  height={1000}
                   className="w-full h-full object-cover"
+                  aria-label={project.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
                 
@@ -231,10 +235,13 @@ export default function Projects() {
                   className="relative h-96 overflow-hidden rounded-2xl mb-6 cursor-pointer"
                   onClick={() => openModal(project)}
                 >
-                  <img
-                    src={project.image}
-                    alt={project.title}
+                  <Image
+                    src={project.image as string}
+                    alt={project.title as string}
+                    width={1000}
+                    height={1000}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    aria-label={project.title}
                   />
                   
                   {/* Gradient Overlay */}
@@ -263,7 +270,7 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <ArrowRight className="w-8 h-8 text-primary" />
+                        <ArrowRight className="w-8 h-8 text-primary" aria-label="View Project Details" />
                       </div>
                       <p className="text-white font-semibold">View Project Details</p>
                     </div>
@@ -281,9 +288,10 @@ export default function Projects() {
                   <button
                     onClick={() => openModal(project)}
                     className="text-primary font-semibold text-sm hover:text-primary-dark transition-colors inline-flex items-center group"
+                    aria-label="Learn More"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-label="Learn More" />
                   </button>
                 </div>
               </motion.div>

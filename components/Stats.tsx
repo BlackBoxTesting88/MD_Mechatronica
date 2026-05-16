@@ -1,8 +1,14 @@
-'use client';
+"use client";
 
-import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
-import { Building2, Users, Award, Globe } from 'lucide-react';
-import { useEffect, useRef } from 'react';
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from "framer-motion";
+import { Building2, Users, Award, Globe } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 interface Stat {
   icon: React.ElementType;
@@ -12,9 +18,17 @@ interface Stat {
   description: string;
 }
 
-function Counter({ from = 0, to, duration = 2 }: { from?: number; to: number; duration?: number }) {
+function Counter({
+  from = 0,
+  to,
+  duration = 2,
+}: {
+  from?: number;
+  to: number;
+  duration?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-100px" }); // vec tipizirano u Framer Motion biblioteci
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest: number) => Math.round(latest));
 
@@ -41,30 +55,30 @@ const stats: Stat[] = [
   {
     icon: Building2,
     number: 500,
-    suffix: '+',
-    label: 'Projects Completed',
-    description: 'Successfully delivered',
+    suffix: "+",
+    label: "Projects Completed",
+    description: "Successfully delivered",
   },
   {
     icon: Users,
     number: 200,
-    suffix: '+',
-    label: 'Happy Clients',
-    description: 'Across Europe',
+    suffix: "+",
+    label: "Happy Clients",
+    description: "Across Europe",
   },
   {
     icon: Award,
     number: 15,
-    suffix: '+',
-    label: 'Years Experience',
-    description: 'In the industry',
+    suffix: "+",
+    label: "Years Experience",
+    description: "In the industry",
   },
   {
     icon: Globe,
     number: 10,
-    suffix: '+',
-    label: 'Countries Served',
-    description: 'International reach',
+    suffix: "+",
+    label: "Countries Served",
+    description: "International reach",
   },
 ];
 
@@ -92,9 +106,7 @@ export default function Stats() {
               <p className="text-xl font-semibold text-gray-800 mb-1">
                 {stat.label}
               </p>
-              <p className="text-gray-600 text-sm">
-                {stat.description}
-              </p>
+              <p className="text-gray-600 text-sm">{stat.description}</p>
             </motion.div>
           ))}
         </div>

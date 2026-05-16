@@ -4,11 +4,19 @@ import { motion, useMotionValue, useTransform, animate, useInView } from 'framer
 import { Building2, Users, Award, Globe } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 
+interface Stat {
+  icon: React.ElementType;
+  number: number;
+  suffix: string;
+  label: string;
+  description: string;
+}
+
 function Counter({ from = 0, to, duration = 2 }: { from?: number; to: number; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const count = useMotionValue(from);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const rounded = useTransform(count, (latest: number) => Math.round(latest));
 
   useEffect(() => {
     if (isInView) {
@@ -18,7 +26,7 @@ function Counter({ from = 0, to, duration = 2 }: { from?: number; to: number; du
   }, [isInView, count, to, duration]);
 
   useEffect(() => {
-    const unsubscribe = rounded.on("change", (latest) => {
+    const unsubscribe = rounded.on("change", (latest: number) => {
       if (ref.current) {
         ref.current.textContent = latest.toString();
       }
@@ -29,7 +37,7 @@ function Counter({ from = 0, to, duration = 2 }: { from?: number; to: number; du
   return <span ref={ref}>{from}</span>;
 }
 
-const stats = [
+const stats: Stat[] = [
   {
     icon: Building2,
     number: 500,
@@ -65,9 +73,9 @@ export default function Stats() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {stats.map((stat: Stat, index: number) => (
             <motion.div
-              key={stat.label}
+              key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}

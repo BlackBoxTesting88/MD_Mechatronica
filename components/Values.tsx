@@ -3,7 +3,14 @@
 import { Heart, Zap, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const values = [
+interface Value {
+  icon: React.ElementType;
+  number: string;
+  title: string;
+  description: string;
+}
+
+const values: Value[] = [
   {
     icon: Heart,
     number: '01',
@@ -58,7 +65,7 @@ export default function Values() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {values.map((value, index) => (
             <motion.div
-              key={value.title}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

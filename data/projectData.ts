@@ -16,6 +16,7 @@ export type Project = {
         "Complete installation and calibration of Diamant hardcover system for major printing facility in Germany.",
       year: "2024",
       client: "PrintTech GmbH",
+      sasa: 'test'
     },
     {
       title: "Kolbus RF Complete Overhaul",

@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "about": "Über uns",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "LanguageSwitcher": {
+    "en": "EN",
+    "de": "DE",
+    "pl": "PL"
+  }
+}

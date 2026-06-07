@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "LanguageSwitcher": {
+    "en": "EN",
+    "de": "DE",
+    "pl": "PL"
+  }
+}

@@ -3,8 +3,11 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Header() {
+  const t = useTranslations('Header');
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -17,11 +20,11 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+    { label: t('home'), href: '#home' },
+    { label: t('services'), href: '#services' },
+    { label: t('about'), href: '#about' },
+    { label: t('projects'), href: '#projects' },
+    { label: t('contact'), href: '#contact' },
   ];
 
   return (
@@ -31,14 +34,13 @@ export default function Header() {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-              <Image src="/logo.png" alt="MD Mechatronica" width={100} height={100} className="h-16 md:h-20 w-auto object-contain transition-all duration-300" style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }} />
-          {/* Desktop Navigation */}
+        <div className="flex items-center justify-between gap-4">
+          <Image src="/logo.png" alt="MD Mechatronica" width={100} height={100} className="h-16 md:h-20 w-auto object-contain transition-all duration-300 shrink-0" style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }} />
+
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
               <a
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className={`font-medium transition-colors ${
                   isScrolled
@@ -51,35 +53,36 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Contact Info */}
-          <div className="hidden xl:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+            <LanguageSwitcher isScrolled={isScrolled} />
             <a
               href="mailto:office@md-mechatronica.com"
-              className="btn-primary text-sm py-3 px-6"
+              className="btn-primary text-sm py-3 px-6 whitespace-nowrap"
             >
               Get Quote
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            type="button"
-            className={`lg:hidden p-2 ${isScrolled ? 'text-dark' : 'text-white'}`}
-            aria-controls="mobile-menu"
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-3 lg:hidden">
+            <LanguageSwitcher isScrolled={isScrolled} compact />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              type="button"
+              className={`p-2 ${isScrolled ? 'text-dark' : 'text-white'}`}
+              aria-controls="mobile-menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-4 bg-white rounded-lg shadow-xl">
             <nav className="flex flex-col space-y-4 px-4">
               {menuItems.map((item) => (
                 <a
-                  key={item.label}
+                  key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-gray-700 hover:text-primary font-medium transition-colors"

@@ -1,7 +1,8 @@
 'use client';
 
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ContactForm from '@/components/contact/ContactForm';
 
 export default function Contact() {
   return (
@@ -85,98 +86,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 h-full flex flex-col">
-              <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
-              
-              <form className="space-y-5">
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
-                      placeholder="+48 123 456 789"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-semibold text-white mb-2">
-                      Service Type
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
-                    >
-                      <option className="bg-dark text-white">Machine Service & Repair</option>
-                      <option className="bg-dark text-white">Installation & Dismantling</option>
-                      <option className="bg-dark text-white">Replacement Parts</option>
-                      <option className="bg-dark text-white">Emergency Support</option>
-                      <option className="bg-dark text-white">Preventive Maintenance</option>
-                      <option className="bg-dark text-white">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
-                    Your Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none"
-                    placeholder="Tell us about your project or machinery needs..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-secondary to-secondary-dark hover:from-secondary-dark hover:to-secondary text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center space-x-2 group"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-
-                <p className="text-gray-400 text-xs text-center">
-                  We respect your privacy. Your information will never be shared.
-                </p>
-              </form>
-            </div>
+            <ContactForm />
           </motion.div>
           </div>
 

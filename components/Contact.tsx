@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   return (
     <section id="contact" className="relative py-20 overflow-hidden">
-      {/* Background with Gradient */}
+      {/* Background with Gradient 123*/}
       <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-primary-dark" />
       
       {/* Animated Background Shapes */}

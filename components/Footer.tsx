@@ -1,6 +1,7 @@
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/logo.png";
+import blackBoxLogo from "@/public/black-box-logo1.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,8 +17,7 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt="MD Mechatronica"
-                className="h-[100px] lg:h-[200px] w-auto object-contain mb-4"
-                style={{ filter: "brightness(0) invert(1)" }}
+                className="h-[120px] lg:h-[120px] w-auto object-contain mb-4"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
@@ -87,11 +87,19 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="container-custom py-6">
-          <div className="flex justify-center items-center">
-            <p className="text-gray-400 text-sm text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-5 md:gap-8">
+            <p className="text-gray-400 text-sm text-center md:text-left">
               © {currentYear} MD Mechatronica Michał Dudek. All rights reserved.
               NIP: 5272245741
             </p>
+            <div className="flex flex-col items-center justify-center gap-2">
+              <Image
+                src={blackBoxLogo}
+                alt="Black Box"
+                className="h-[120px] lg:h-[180px] w-auto object-contain shrink-0 contrast-50"
+              />
+              <p className="text-gray-400 text-sm">Development by:</p>
+            </div>
           </div>
         </div>
       </div>

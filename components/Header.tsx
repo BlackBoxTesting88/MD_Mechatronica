@@ -41,7 +41,7 @@ export default function Header() {
             alt="MD Mechatronica"
             width={200}
             height={200}
-            className="h-[100px] lg:h-[200px] w-auto object-contain transition-all duration-300 shrink-0"
+            className="h-[120px] lg:h-[120px] w-auto object-contain transition-all duration-300 shrink-0"
             style={{ filter: isScrolled ? "none" : "brightness(0) invert(1)" }}
           />
 

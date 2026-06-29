@@ -1,8 +1,11 @@
 import { ArrowRight, Play } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 import BackgroundSlideShow from './sub-components/backgroundSlideShow';
 import { HERO_SLIDES } from './heroSlides';
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations('Hero');
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -14,52 +17,51 @@ export default function Hero() {
         <div className="hero-enter">
           <div className="inline-block mb-4">
             <span className="bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-semibold">
-              Professional Machine Service Since 2010
+              {t('badge')}
             </span>
           </div>
 
           <h1 className="heading-xl text-white mb-6">
-            Expert Installation &{' '}
-            <span className="text-secondary">Maintenance</span> of Industrial Machinery
+            {t('title')}{' '}
+            <span className="text-secondary">{t('titleHighlight')}</span>{' '}
+            {t('titleSuffix')}
           </h1>
 
           <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-            Specialized in Müller Martini, Kolbus, and Hörauf printing machines.
-            We provide comprehensive installation, repair, and maintenance services
-            across Europe with over 15 years of experience.
+            {t('description')}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a
               href="#contact"
               className="btn-primary inline-flex items-center space-x-2"
-              aria-label="Get started — go to the contact section"
+              aria-label={t('ctaPrimaryAria')}
             >
-              <span>Get Started</span>
+              <span>{t('ctaPrimary')}</span>
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </a>
             <a
               href="#services"
               className="btn-outline bg-white/10 border-white text-white hover:bg-white hover:text-dark inline-flex items-center space-x-2"
-              aria-label="View our services section"
+              aria-label={t('ctaSecondaryAria')}
             >
               <Play className="w-5 h-5" aria-hidden="true" />
-              <span>Our Services</span>
+              <span>{t('ctaSecondary')}</span>
             </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20">
             <div>
               <p className="text-4xl font-bold text-white mb-2">15+</p>
-              <p className="text-gray-400 text-sm">Years Experience</p>
+              <p className="text-gray-400 text-sm">{t('statYears')}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-white mb-2">500+</p>
-              <p className="text-gray-400 text-sm">Projects Done</p>
+              <p className="text-gray-400 text-sm">{t('statProjects')}</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-white mb-2">100%</p>
-              <p className="text-gray-400 text-sm">Client Satisfaction</p>
+              <p className="text-gray-400 text-sm">{t('statSatisfaction')}</p>
             </div>
           </div>
         </div>

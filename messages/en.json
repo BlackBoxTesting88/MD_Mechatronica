@@ -10,5 +10,291 @@
     "en": "EN",
     "de": "DE",
     "pl": "PL"
+  },
+  "Hero": {
+    "badge": "Professional Machine Service Since 2010",
+    "title": "Expert Installation &",
+    "titleHighlight": "Maintenance",
+    "titleSuffix": "of Industrial Machinery",
+    "description": "Specialized in Müller Martini, Kolbus, and Hörauf printing machines. We provide comprehensive installation, repair, and maintenance services across Europe with over 15 years of experience.",
+    "ctaPrimary": "Get Started",
+    "ctaPrimaryAria": "Get started — go to the contact section",
+    "ctaSecondary": "Our Services",
+    "ctaSecondaryAria": "View our services section",
+    "statYears": "Years Experience",
+    "statProjects": "Projects Done",
+    "statSatisfaction": "Client Satisfaction"
+  },
+  "Services": {
+    "eyebrow": "Our Services",
+    "title": "Comprehensive",
+    "titleHighlight": "Machine Service",
+    "titleSuffix": "Solutions",
+    "subtitle": "From installation to maintenance, we provide complete support for your industrial machinery needs.",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about this service",
+    "slideshowAlt": "Machine {index}",
+    "items": {
+      "repair": {
+        "title": "Machine Service & Repair",
+        "description": "Expert maintenance and repair of Müller Martini, Kolbus, and Hörauf printing machines. Fast response time and professional diagnostics.",
+        "stats": "200+ repairs",
+        "feature1": "Hardcover machines",
+        "feature2": "Three-knife trimmers",
+        "feature3": "Binding systems"
+      },
+      "installation": {
+        "title": "Installation & Dismantling",
+        "description": "Professional installation and relocation services for industrial machinery. Complete project management from start to finish.",
+        "stats": "50+ installations",
+        "feature1": "Machine relocation",
+        "feature2": "Technical setup",
+        "feature3": "Safety compliance"
+      },
+      "parts": {
+        "title": "Replacement Parts",
+        "description": "High-quality replacement parts for all major printing machine brands. Fast delivery and expert consultation.",
+        "stats": "1000+ parts",
+        "feature1": "Original parts",
+        "feature2": "Quality alternatives",
+        "feature3": "Fast delivery"
+      },
+      "emergency": {
+        "title": "Emergency Support",
+        "description": "24/7 emergency support for critical machine failures. Minimize downtime with our rapid response team.",
+        "stats": "<2h response",
+        "feature1": "24/7 availability",
+        "feature2": "Remote diagnostics",
+        "feature3": "On-site service"
+      },
+      "preventive": {
+        "title": "Preventive Maintenance",
+        "description": "Regular maintenance programs to prevent breakdowns and extend machine lifespan. Customized service plans.",
+        "stats": "100+ contracts",
+        "feature1": "Scheduled inspections",
+        "feature2": "Performance optimization",
+        "feature3": "Extended warranty"
+      },
+      "modernization": {
+        "title": "Modernization & Upgrades",
+        "description": "Upgrade older machines with modern technology. Improve efficiency and extend equipment life.",
+        "stats": "30+ upgrades",
+        "feature1": "Technology updates",
+        "feature2": "Automation",
+        "feature3": "Performance boost"
+      }
+    },
+    "expertise": {
+      "badge": "Our Expertise",
+      "title": "Printing Machine Maintenance Müller Martini",
+      "subtitle": "We service all generations and models with expert precision",
+      "hardcover": "Hardcover",
+      "trimmers": "Trimmers",
+      "binders": "Binders",
+      "hardcoverMachines": [
+        "Diamant (all generations)",
+        "Ventura (all generations)",
+        "Collibri",
+        "Ribbon",
+        "Vesta",
+        "Kolbus RF",
+        "Kolbus BF",
+        "Hörauf Compact",
+        "Hörauf Universal"
+      ],
+      "trimmerMachines": [
+        "Esprit",
+        "Merit",
+        "Zenith",
+        "Orbit",
+        "Solit",
+        "Kolbus HD",
+        "Granit"
+      ],
+      "binderMachines": [
+        "Acoro",
+        "Bolero",
+        "Corona",
+        "Pantera",
+        "Kolbus KM",
+        "Kolbus DA",
+        "Alegro"
+      ]
+    },
+    "cta": "Request Service Quote",
+    "ctaAria": "Request service quote — go to contact section"
+  },
+  "About": {
+    "eyebrow": "About MD Mechatronica",
+    "title": "Leading Provider of",
+    "titleHighlight": "Industrial Machine",
+    "titleSuffix": "Services",
+    "description": "MD Mechatronica, founded by Michał Dudek, is a trusted partner for companies across Europe requiring professional maintenance, installation, and repair services for complex industrial machinery.",
+    "additionalService1": "We are able to repair also other machines",
+    "additionalService2": "Programming",
+    "additionalService3": "Modifications of existing lines",
+    "feature1": "Certified technicians with 15+ years experience",
+    "feature2": "Specialized in Müller Martini, Kolbus & Hörauf",
+    "feature3": "24/7 emergency support across Europe",
+    "feature4": "Comprehensive warranty on all services",
+    "cta": "Work With Us",
+    "ctaAria": "Go to contact section",
+    "isoCertified": "Certified",
+    "imageCollibri": "Collibri machine",
+    "imageAlegro": "Alegro installation in Saudi Arabia",
+    "imageBolero": "Bolero installation",
+    "imageHoerauf": "Hörauf BDM Compact machine"
+  },
+  "Values": {
+    "eyebrow": "Our Core Values",
+    "title": "What Drives Us",
+    "titleHighlight": "Forward",
+    "subtitle": "At MD Mechatronica, we rely on honesty, discipline and hard work. Our success is attributed to upholding a simple set of core values.",
+    "items": {
+      "honesty": {
+        "title": "Honesty",
+        "description": "Be humble in all dealings with our partners, clients and team members. True wisdom and understanding belong to the humble."
+      },
+      "passion": {
+        "title": "Passion",
+        "description": "Success is when we can achieve results in the things we are passionate about and feel as though we are making a difference."
+      },
+      "quality": {
+        "title": "Quality Work",
+        "description": "We ensure that all projects are done with utmost professionalism using quality materials while offering clients the support and accessibility."
+      },
+      "dedication": {
+        "title": "Dedication",
+        "description": "Our dedicated team works tirelessly to ensure every project meets the highest standards of excellence and customer satisfaction."
+      }
+    }
+  },
+  "Stats": {
+    "projectsLabel": "Projects Completed",
+    "projectsDescription": "Successfully delivered",
+    "clientsLabel": "Happy Clients",
+    "clientsDescription": "Across Europe",
+    "yearsLabel": "Years Experience",
+    "yearsDescription": "In the industry",
+    "countriesLabel": "Countries Served",
+    "countriesDescription": "International reach"
+  },
+  "Projects": {
+    "eyebrow": "Our Projects",
+    "title": "Our latest",
+    "titleHighlight": "projects.",
+    "paragraph1": "At MD Mechatronica, we rely on honesty, discipline and hard work. We believe our success can be attributed to upholding a simple set of core values that date back to the beginning of the company.",
+    "paragraph2": "MD Mechatronica is an integrated service firm offering installation, maintenance, and repair services to customers throughout Europe. Unique to MD Mechatronica is the fact that we conduct all services in-house with highly skilled technicians.",
+    "statProjects": "Projects Done",
+    "statClients": "Happy Clients",
+    "statYears": "Years Exp.",
+    "viewDetails": "View Project Details",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about this project",
+    "modalCloseAria": "Close project details",
+    "modalDetailsTitle": "Project Details",
+    "modalDetailsBody": "This project showcases our expertise in handling complex industrial machinery installations and maintenance. Our team of certified technicians worked closely with the client to ensure minimal downtime and maximum efficiency.",
+    "modalAchievementsTitle": "Key Achievements",
+    "modalAchievement1": "Professional installation and setup",
+    "modalAchievement2": "Minimal production downtime",
+    "modalAchievement3": "Complete documentation and training",
+    "items": {
+      "diamant": {
+        "title": "Müller Martini Diamant Installation",
+        "category": "Installation & Setup",
+        "description": "Complete installation and calibration of Diamant hardcover system for major printing facility in Germany."
+      },
+      "kolbus": {
+        "title": "Kolbus RF Complete Overhaul",
+        "category": "Maintenance & Repair",
+        "description": "Full mechanical and electrical overhaul of Kolbus RF binding line with modernization and automation upgrades."
+      },
+      "trimmer": {
+        "title": "Three-Knife Trimmer Upgrade",
+        "category": "Modernization",
+        "description": "Technology upgrade for Esprit trimmer including automation systems and safety improvements."
+      },
+      "emergency": {
+        "title": "Emergency Production Line Repair",
+        "category": "Emergency Support",
+        "description": "24-hour emergency response for critical production line failure, restoring operations within deadline."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Get In Touch",
+    "title": "Ready to Start Your",
+    "titleHighlight": "Project?",
+    "subtitle": "Contact us today and let's discuss how we can help with your machinery needs.",
+    "qrTitle": "Quick Call QR Code",
+    "qrAlt": "QR Code - Call us",
+    "qrScanTitle": "Scan to Call Us Directly",
+    "qrScanDescription": "Point your camera at the QR code to instantly call us",
+    "qrEmergency": "Available 24/7 for emergencies",
+    "sendEmail": "Send Email",
+    "emailResponse": "We'll respond within 24 hours",
+    "visitOffice": "Visit Our Office",
+    "addressLine1": "Ul. Przedwiośnia 23",
+    "addressLine2": "05-500 Piaseczno",
+    "addressLine3": "Poland",
+    "bottomCta": "Need immediate assistance? Scan the QR code above to call us directly.",
+    "formTitle": "Send Us a Message",
+    "formSuccessTitle": "Message sent successfully!",
+    "formSuccessMessage": "Thank you for reaching out. We'll get back to you within 24 hours.",
+    "formSendAnother": "Send another message",
+    "formNameLabel": "Full Name *",
+    "formNamePlaceholder": "John Doe",
+    "formEmailLabel": "Email Address *",
+    "formEmailPlaceholder": "john@example.com",
+    "formPhoneLabel": "Phone Number",
+    "formPhonePlaceholder": "+48 123 456 789",
+    "formServiceLabel": "Service Type",
+    "formMessageLabel": "Your Message *",
+    "formMessagePlaceholder": "Tell us about your project or machinery needs...",
+    "formSubmitting": "Sending...",
+    "formSubmit": "Send Message",
+    "formPrivacy": "We respect your privacy. Your information will never be shared.",
+    "phoneNotProvided": "Not provided",
+    "services": {
+      "machine-service": "Machine Service & Repair",
+      "installation": "Installation & Dismantling",
+      "replacement-parts": "Replacement Parts",
+      "emergency-support": "Emergency Support",
+      "preventive-maintenance": "Preventive Maintenance",
+      "other": "Other"
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name must be less than 100 characters",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneInvalid": "Please enter a valid phone number",
+      "serviceRequired": "Please select a service type",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message must be less than 2000 characters"
+    },
+    "errors": {
+      "notConfigured": "Contact form is not configured yet. Please try again later.",
+      "sendFailed": "Failed to send message. Please try again.",
+      "generic": "Something went wrong. Please try again later."
+    }
+  },
+  "Footer": {
+    "logoAlt": "MD Mechatronica",
+    "description": "Leading provider of industrial machinery installation, maintenance, and repair services. Specialized in Müller Martini, Kolbus, and Hörauf printing equipment.",
+    "quickLinks": "Quick Links",
+    "goToSectionAria": "Go to {section} section",
+    "contactInfo": "Contact Info",
+    "email": "Email",
+    "emailAria": "Email: office@md-mechatronica.com",
+    "emailIconAria": "Email",
+    "address": "Address",
+    "addressIconAria": "Address",
+    "addressLine1": "Ul. Przedwiośnia 23",
+    "addressLine2": "05-500 Piaseczno, Poland",
+    "copyright": "© {year} MD Mechatronica Michał Dudek. All rights reserved.",
+    "nip": "NIP: 5272245741",
+    "blackBoxAlt": "Black Box",
+    "developmentBy": "Development by:"
   }
 }

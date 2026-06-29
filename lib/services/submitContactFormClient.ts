@@ -1,26 +1,31 @@
-import {
-  serviceOptions,
-  type ContactFormValues,
-} from '@/lib/schemas/contactFormSchema';
+import type { ContactFormValues } from '@/lib/schemas/contactFormSchema';
+
+type SubmitContactFormOptions = {
+  serviceLabel: string;
+  phoneNotProvided: string;
+  errors: {
+    notConfigured: string;
+    sendFailed: string;
+    generic: string;
+  };
+};
 
 type SubmitContactFormResult =
   | { success: true }
   | { success: false; error: string };
 
 export async function submitContactFormClient(
-  data: ContactFormValues
+  data: ContactFormValues,
+  options: SubmitContactFormOptions
 ): Promise<SubmitContactFormResult> {
   const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
   if (!accessKey) {
     return {
       success: false,
-      error: 'Contact form is not configured yet. Please try again later.',
+      error: options.errors.notConfigured,
     };
   }
-
-  const serviceLabel =
-    serviceOptions.find((option) => option.value === data.service)?.label ?? data.service;
 
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
@@ -33,8 +38,8 @@ export async function submitContactFormClient(
         access_key: accessKey,
         name: data.name,
         email: data.email,
-        phone: data.phone || 'Not provided',
-        service: serviceLabel,
+        phone: data.phone || options.phoneNotProvided,
+        service: options.serviceLabel,
         message: data.message,
         subject: `New inquiry from ${data.name}`,
         from_name: 'MD Mechatronica Website',
@@ -47,7 +52,7 @@ export async function submitContactFormClient(
     if (!response.ok || !result.success) {
       return {
         success: false,
-        error: result.message ?? 'Failed to send message. Please try again.',
+        error: result.message ?? options.errors.sendFailed,
       };
     }
 
@@ -55,7 +60,7 @@ export async function submitContactFormClient(
   } catch {
     return {
       success: false,
-      error: 'Something went wrong. Please try again later.',
+      error: options.errors.generic,
     };
   }
 }

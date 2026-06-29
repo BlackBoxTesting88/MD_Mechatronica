@@ -10,5 +10,291 @@
     "en": "EN",
     "de": "DE",
     "pl": "PL"
+  },
+  "Hero": {
+    "badge": "Profesjonalny serwis maszyn od 2010",
+    "title": "Fachowa instalacja i",
+    "titleHighlight": "konserwacja",
+    "titleSuffix": "maszyn przemysłowych",
+    "description": "Specjalizujemy się w maszynach drukarskich Müller Martini, Kolbus i Hörauf. Oferujemy kompleksową instalację, naprawę i serwis w całej Europie z ponad 15-letnim doświadczeniem.",
+    "ctaPrimary": "Rozpocznij",
+    "ctaPrimaryAria": "Rozpocznij — przejdź do sekcji kontakt",
+    "ctaSecondary": "Nasze usługi",
+    "ctaSecondaryAria": "Zobacz sekcję usług",
+    "statYears": "Lat doświadczenia",
+    "statProjects": "Zrealizowanych projektów",
+    "statSatisfaction": "Zadowolenia klientów"
+  },
+  "Services": {
+    "eyebrow": "Nasze usługi",
+    "title": "Kompleksowe",
+    "titleHighlight": "usługi serwisowe",
+    "titleSuffix": "maszyn",
+    "subtitle": "Od instalacji po konserwację — zapewniamy pełne wsparcie dla Twoich maszyn przemysłowych.",
+    "learnMore": "Dowiedz się więcej",
+    "learnMoreAria": "Dowiedz się więcej o tej usłudze",
+    "slideshowAlt": "Maszyna {index}",
+    "items": {
+      "repair": {
+        "title": "Serwis i naprawa maszyn",
+        "description": "Fachowa konserwacja i naprawa maszyn drukarskich Müller Martini, Kolbus i Hörauf. Szybki czas reakcji i profesjonalna diagnostyka.",
+        "stats": "200+ napraw",
+        "feature1": "Maszyny do twardych okładek",
+        "feature2": "Gilotyny trójnożowe",
+        "feature3": "Systemy klejenia"
+      },
+      "installation": {
+        "title": "Instalacja i demontaż",
+        "description": "Profesjonalna instalacja i relokacja maszyn przemysłowych. Kompleksowe zarządzanie projektem od początku do końca.",
+        "stats": "50+ instalacji",
+        "feature1": "Relokacja maszyn",
+        "feature2": "Konfiguracja techniczna",
+        "feature3": "Zgodność z normami BHP"
+      },
+      "parts": {
+        "title": "Części zamienne",
+        "description": "Wysokiej jakości części zamienne do wszystkich głównych marek maszyn drukarskich. Szybka dostawa i fachowe doradztwo.",
+        "stats": "1000+ części",
+        "feature1": "Części oryginalne",
+        "feature2": "Alternatywy wysokiej jakości",
+        "feature3": "Szybka dostawa"
+      },
+      "emergency": {
+        "title": "Wsparcie awaryjne",
+        "description": "Całodobowe wsparcie w przypadku krytycznych awarii maszyn. Minimalizuj przestoje dzięki naszemu szybkiemu zespołowi reagowania.",
+        "stats": "Reakcja <2h",
+        "feature1": "Dostępność 24/7",
+        "feature2": "Diagnostyka zdalna",
+        "feature3": "Serwis na miejscu"
+      },
+      "preventive": {
+        "title": "Konserwacja prewencyjna",
+        "description": "Regularne programy konserwacji zapobiegające awariom i wydłużające żywotność maszyn. Indywidualne plany serwisowe.",
+        "stats": "100+ umów",
+        "feature1": "Planowe przeglądy",
+        "feature2": "Optymalizacja wydajności",
+        "feature3": "Rozszerzona gwarancja"
+      },
+      "modernization": {
+        "title": "Modernizacja i ulepszenia",
+        "description": "Modernizuj starsze maszyny nowoczesną technologią. Popraw wydajność i wydłuż żywotność urządzeń.",
+        "stats": "30+ modernizacji",
+        "feature1": "Aktualizacje technologiczne",
+        "feature2": "Automatyzacja",
+        "feature3": "Wzrost wydajności"
+      }
+    },
+    "expertise": {
+      "badge": "Nasza specjalizacja",
+      "title": "Konserwacja maszyn drukarskich Müller Martini",
+      "subtitle": "Serwisujemy wszystkie generacje i modele z fachową precyzją",
+      "hardcover": "Twarda okładka",
+      "trimmers": "Gilotyny",
+      "binders": "Klejarki",
+      "hardcoverMachines": [
+        "Diamant (wszystkie generacje)",
+        "Ventura (wszystkie generacje)",
+        "Collibri",
+        "Ribbon",
+        "Vesta",
+        "Kolbus RF",
+        "Kolbus BF",
+        "Hörauf Compact",
+        "Hörauf Universal"
+      ],
+      "trimmerMachines": [
+        "Esprit",
+        "Merit",
+        "Zenith",
+        "Orbit",
+        "Solit",
+        "Kolbus HD",
+        "Granit"
+      ],
+      "binderMachines": [
+        "Acoro",
+        "Bolero",
+        "Corona",
+        "Pantera",
+        "Kolbus KM",
+        "Kolbus DA",
+        "Alegro"
+      ]
+    },
+    "cta": "Zapytaj o wycenę serwisu",
+    "ctaAria": "Zapytaj o wycenę serwisu — przejdź do kontaktu"
+  },
+  "About": {
+    "eyebrow": "O MD Mechatronica",
+    "title": "Wiodący dostawca",
+    "titleHighlight": "usług serwisowych",
+    "titleSuffix": "maszyn przemysłowych",
+    "description": "MD Mechatronica, założona przez Michała Dudka, to zaufany partner dla firm w całej Europie, które potrzebują profesjonalnej konserwacji, instalacji i naprawy złożonych maszyn przemysłowych.",
+    "additionalService1": "Naprawiamy również inne maszyny",
+    "additionalService2": "Programowanie",
+    "additionalService3": "Modyfikacje istniejących linii",
+    "feature1": "Certyfikowani technicy z ponad 15-letnim doświadczeniem",
+    "feature2": "Specjalizacja w maszynach Müller Martini, Kolbus i Hörauf",
+    "feature3": "Całodobowe wsparcie awaryjne w całej Europie",
+    "feature4": "Kompleksowa gwarancja na wszystkie usługi",
+    "cta": "Współpracuj z nami",
+    "ctaAria": "Przejdź do sekcji kontakt",
+    "isoCertified": "Certyfikacja",
+    "imageCollibri": "Maszyna Collibri",
+    "imageAlegro": "Instalacja Alegro w Arabii Saudyjskiej",
+    "imageBolero": "Instalacja Bolero",
+    "imageHoerauf": "Maszyna Hörauf BDM Compact"
+  },
+  "Values": {
+    "eyebrow": "Nasze wartości",
+    "title": "Co nas",
+    "titleHighlight": "napędza",
+    "subtitle": "W MD Mechatronica stawiamy na uczciwość, dyscyplinę i ciężką pracę. Nasz sukces wynika z przestrzegania prostego zestawu fundamentalnych wartości.",
+    "items": {
+      "honesty": {
+        "title": "Uczciwość",
+        "description": "Bądź pokorny we wszystkich relacjach z partnerami, klientami i członkami zespołu. Prawdziwa mądrość i zrozumienie należą do pokornych."
+      },
+      "passion": {
+        "title": "Pasja",
+        "description": "Sukces to moment, w którym osiągamy wyniki w obszarach, które nas pasjonują, i czujemy, że robimy różnicę."
+      },
+      "quality": {
+        "title": "Jakość pracy",
+        "description": "Zapewniamy, że wszystkie projekty realizowane są z najwyższą profesjonalizmem i wykorzystaniem materiałów najwyższej jakości, oferując klientom wsparcie i dostępność."
+      },
+      "dedication": {
+        "title": "Zaangażowanie",
+        "description": "Nasz zaangażowany zespół pracuje niestrudzenie, aby każdy projekt spełniał najwyższe standardy doskonałości i satysfakcji klienta."
+      }
+    }
+  },
+  "Stats": {
+    "projectsLabel": "Zrealizowanych projektów",
+    "projectsDescription": "Pomyślnie ukończonych",
+    "clientsLabel": "Zadowolonych klientów",
+    "clientsDescription": "W całej Europie",
+    "yearsLabel": "Lat doświadczenia",
+    "yearsDescription": "W branży",
+    "countriesLabel": "Obsługiwanych krajów",
+    "countriesDescription": "Zasięg międzynarodowy"
+  },
+  "Projects": {
+    "eyebrow": "Nasze projekty",
+    "title": "Nasze najnowsze",
+    "titleHighlight": "projekty.",
+    "paragraph1": "W MD Mechatronica stawiamy na uczciwość, dyscyplinę i ciężką pracę. Wierzymy, że nasz sukces wynika z przestrzegania prostego zestawu wartości, które towarzyszą firmie od samego początku.",
+    "paragraph2": "MD Mechatronica to zintegrowana firma serwisowa oferująca instalację, konserwację i naprawy klientom w całej Europie. Wyjątkowe w MD Mechatronica jest to, że wszystkie usługi wykonujemy we własnym zakresie, z udziałem wysoko wykwalifikowanych techników.",
+    "statProjects": "Projektów",
+    "statClients": "Klientów",
+    "statYears": "Lat dośw.",
+    "viewDetails": "Zobacz szczegóły projektu",
+    "learnMore": "Dowiedz się więcej",
+    "learnMoreAria": "Dowiedz się więcej o tym projekcie",
+    "modalCloseAria": "Zamknij szczegóły projektu",
+    "modalDetailsTitle": "Szczegóły projektu",
+    "modalDetailsBody": "Ten projekt pokazuje nasze doświadczenie w obsłudze złożonych instalacji i konserwacji maszyn przemysłowych. Nasz zespół certyfikowanych techników ściśle współpracował z klientem, aby zapewnić minimalne przestoje i maksymalną efektywność.",
+    "modalAchievementsTitle": "Kluczowe osiągnięcia",
+    "modalAchievement1": "Profesjonalna instalacja i konfiguracja",
+    "modalAchievement2": "Minimalny przestój produkcji",
+    "modalAchievement3": "Pełna dokumentacja i szkolenie",
+    "items": {
+      "diamant": {
+        "title": "Instalacja Müller Martini Diamant",
+        "category": "Instalacja i konfiguracja",
+        "description": "Kompleksowa instalacja i kalibracja systemu Diamant do twardych okładek dla dużej drukarni w Niemczech."
+      },
+      "kolbus": {
+        "title": "Kompleksowa regeneracja Kolbus RF",
+        "category": "Konserwacja i naprawa",
+        "description": "Pełna mechaniczna i elektryczna regeneracja linii klejenia Kolbus RF z modernizacją i automatyzacją."
+      },
+      "trimmer": {
+        "title": "Modernizacja gilotyny trójnożnej",
+        "category": "Modernizacja",
+        "description": "Modernizacja technologiczna gilotyny Esprit, w tym systemy automatyki i ulepszenia bezpieczeństwa."
+      },
+      "emergency": {
+        "title": "Awaryjna naprawa linii produkcyjnej",
+        "category": "Wsparcie awaryjne",
+        "description": "24-godzinna reakcja awaryjna na krytyczną awarię linii produkcyjnej z przywróceniem operacji w terminie."
+      }
+    }
+  },
+  "Contact": {
+    "eyebrow": "Skontaktuj się",
+    "title": "Gotowy, aby rozpocząć",
+    "titleHighlight": "projekt?",
+    "subtitle": "Skontaktuj się z nami już dziś i omówmy, jak możemy pomóc w Twoich potrzebach maszynowych.",
+    "qrTitle": "Kod QR do szybkiego połączenia",
+    "qrAlt": "Kod QR – zadzwoń do nas",
+    "qrScanTitle": "Zeskanuj, aby zadzwonić bezpośrednio",
+    "qrScanDescription": "Skieruj aparat na kod QR, aby natychmiast do nas zadzwonić",
+    "qrEmergency": "Dostępni 24/7 w nagłych przypadkach",
+    "sendEmail": "Wyślij e-mail",
+    "emailResponse": "Odpowiemy w ciągu 24 godzin",
+    "visitOffice": "Odwiedź nasze biuro",
+    "addressLine1": "Ul. Przedwiośnia 23",
+    "addressLine2": "05-500 Piaseczno",
+    "addressLine3": "Polska",
+    "bottomCta": "Potrzebujesz natychmiastowej pomocy? Zeskanuj kod QR powyżej, aby zadzwonić bezpośrednio.",
+    "formTitle": "Wyślij nam wiadomość",
+    "formSuccessTitle": "Wiadomość wysłana pomyślnie!",
+    "formSuccessMessage": "Dziękujemy za kontakt. Odezwiemy się w ciągu 24 godzin.",
+    "formSendAnother": "Wyślij kolejną wiadomość",
+    "formNameLabel": "Imię i nazwisko *",
+    "formNamePlaceholder": "Jan Kowalski",
+    "formEmailLabel": "Adres e-mail *",
+    "formEmailPlaceholder": "jan@example.com",
+    "formPhoneLabel": "Numer telefonu",
+    "formPhonePlaceholder": "+48 123 456 789",
+    "formServiceLabel": "Rodzaj usługi",
+    "formMessageLabel": "Twoja wiadomość *",
+    "formMessagePlaceholder": "Opowiedz nam o swoim projekcie lub potrzebach maszynowych...",
+    "formSubmitting": "Wysyłanie...",
+    "formSubmit": "Wyślij wiadomość",
+    "formPrivacy": "Szanujemy Twoją prywatność. Twoje dane nigdy nie będą udostępniane.",
+    "phoneNotProvided": "Nie podano",
+    "services": {
+      "machine-service": "Serwis i naprawa maszyn",
+      "installation": "Instalacja i demontaż",
+      "replacement-parts": "Części zamienne",
+      "emergency-support": "Wsparcie awaryjne",
+      "preventive-maintenance": "Konserwacja prewencyjna",
+      "other": "Inne"
+    },
+    "validation": {
+      "nameMin": "Imię i nazwisko musi mieć co najmniej 2 znaki",
+      "nameMax": "Imię i nazwisko może mieć maksymalnie 100 znaków",
+      "emailRequired": "Adres e-mail jest wymagany",
+      "emailInvalid": "Podaj prawidłowy adres e-mail",
+      "phoneInvalid": "Podaj prawidłowy numer telefonu",
+      "serviceRequired": "Wybierz rodzaj usługi",
+      "messageMin": "Wiadomość musi mieć co najmniej 10 znaków",
+      "messageMax": "Wiadomość może mieć maksymalnie 2000 znaków"
+    },
+    "errors": {
+      "notConfigured": "Formularz kontaktowy nie jest jeszcze skonfigurowany. Spróbuj ponownie później.",
+      "sendFailed": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+      "generic": "Coś poszło nie tak. Spróbuj ponownie później."
+    }
+  },
+  "Footer": {
+    "logoAlt": "MD Mechatronica",
+    "description": "Wiodący dostawca usług instalacji, konserwacji i naprawy maszyn przemysłowych. Specjalizacja w maszynach drukarskich Müller Martini, Kolbus i Hörauf.",
+    "quickLinks": "Szybkie linki",
+    "goToSectionAria": "Przejdź do sekcji {section}",
+    "contactInfo": "Informacje kontaktowe",
+    "email": "E-mail",
+    "emailAria": "E-mail: office@md-mechatronica.com",
+    "emailIconAria": "E-mail",
+    "address": "Adres",
+    "addressIconAria": "Adres",
+    "addressLine1": "Ul. Przedwiośnia 23",
+    "addressLine2": "05-500 Piaseczno, Polska",
+    "copyright": "© {year} MD Mechatronica Michał Dudek. Wszelkie prawa zastrzeżone.",
+    "nip": "NIP: 5272245741",
+    "blackBoxAlt": "Black Box",
+    "developmentBy": "Opracowanie:"
   }
 }

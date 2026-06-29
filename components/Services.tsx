@@ -17,17 +17,15 @@ interface Service {
 // Slideshow component
 function MachineSlideshow() {
   const images: string[] = [
-    "/images/x800_muellermartini-diamant-11862325.webp",
-    "/images/Muller-Martini-Diamant-MC-35-7-scaled.webp",
-    "/images/muller-martini-diamant-mc-30.webp",
-    "/images/x800_muellermartini-zenith-s-450470.webp",
-    "/images/x800_muellermartini-zenith-s-450466.webp",
-    "/images/x800_muellermartini-zenith-s-450467.webp",
-    "/images/x800_muellermartini-zenith-s-460210.webp",
-    "/images/thorium-APO0TCVHBv0-unsplash.jpg",
-    "/images/futuristic-machinery-in-production-line.webp",
-    "/images/1418887497_3.webp",
-    "/images/x800_muellermartini-diamant-12398885.webp",
+    "/images/Diamant.webp",
+    "/images/Collibri.webp",
+    "/images/Bolero_Installation.webp",
+    "/images/Hoerauf_BDM_Compact.webp",
+    "/images/Kolbus_KM200.webp",
+    "/images/Kolbus_BF530.webp",
+    "/images/Sorter.webp",
+    "/images/Bolero_Installation_.webp",
+    "/images/Alegro_SaudiArabia.webp",
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -49,8 +47,7 @@ function MachineSlideshow() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0"
-        >
+          className="absolute inset-0">
           <Image
             src={images[currentIndex]}
             alt={`Machine ${currentIndex + 1}`}
@@ -87,7 +84,7 @@ const services: Service[] = [
       "Expert maintenance and repair of Müller Martini, Kolbus, and Hörauf printing machines. Fast response time and professional diagnostics.",
     features: ["Hardcover machines", "Three-knife trimmers", "Binding systems"],
     stats: "200+ repairs",
-    bgImage: "/images/x800_muellermartini-diamant-11862325.webp",
+    bgImage: "/images/Alegro_SaudiArabia.webp",
   },
   {
     icon: Settings,
@@ -96,7 +93,7 @@ const services: Service[] = [
       "Professional installation and relocation services for industrial machinery. Complete project management from start to finish.",
     features: ["Machine relocation", "Technical setup", "Safety compliance"],
     stats: "50+ installations",
-    bgImage: "/images/Muller-Martini-Diamant-MC-35-7-scaled.webp",
+    bgImage: "/images/Bolero_Installation_.webp",
   },
   {
     icon: Package,
@@ -105,7 +102,7 @@ const services: Service[] = [
       "High-quality replacement parts for all major printing machine brands. Fast delivery and expert consultation.",
     features: ["Original parts", "Quality alternatives", "Fast delivery"],
     stats: "1000+ parts",
-    bgImage: "/images/muller-martini-diamant-mc-30.webp",
+    bgImage: "/images/Bolero_Installation.webp",
   },
   {
     icon: Zap,
@@ -114,7 +111,7 @@ const services: Service[] = [
       "24/7 emergency support for critical machine failures. Minimize downtime with our rapid response team.",
     features: ["24/7 availability", "Remote diagnostics", "On-site service"],
     stats: "<2h response",
-    bgImage: "/images/x800_muellermartini-zenith-s-450470.webp",
+    bgImage: "/images/Collibri.webp",
   },
   {
     icon: Shield,
@@ -127,7 +124,7 @@ const services: Service[] = [
       "Extended warranty",
     ],
     stats: "100+ contracts",
-    bgImage: "/images/thorium-APO0TCVHBv0-unsplash.jpg",
+    bgImage: "/images/Diamant.webp",
   },
   {
     icon: Clock,
@@ -136,7 +133,7 @@ const services: Service[] = [
       "Upgrade older machines with modern technology. Improve efficiency and extend equipment life.",
     features: ["Technology updates", "Automation", "Performance boost"],
     stats: "30+ upgrades",
-    bgImage: "/images/futuristic-machinery-in-production-line.webp",
+    bgImage: "/images/Hoerauf_BDM_Compact.webp",
   },
 ];
 
@@ -152,8 +149,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
+          className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Our Services
           </span>
@@ -193,12 +189,10 @@ export default function Services() {
                   opacity: isOtherHovered ? 0.4 : 1,
                   filter: isOtherHovered ? "blur(2px) grayscale(50%)" : "none",
                   transition: "all 0.4s ease-in-out",
-                }}
-              >
+                }}>
                 {/* Background Image - prikazuje se SAMO na hover */}
                 <div
-                  className={`absolute inset-0 z-0 transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-0"}`}
-                >
+                  className={`absolute inset-0 z-0 transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-0"}`}>
                   <Image
                     src={service.bgImage as string}
                     alt={service.title}
@@ -213,12 +207,10 @@ export default function Services() {
 
                 {/* Card Content */}
                 <div
-                  className={`relative p-8 h-full transition-all duration-300 ${isHovered ? "bg-transparent" : "bg-white shadow-lg border border-gray-100"}`}
-                >
+                  className={`relative p-8 h-full transition-all duration-300 ${isHovered ? "bg-transparent" : "bg-white shadow-lg border border-gray-100"}`}>
                   {/* Icon */}
                   <div
-                    className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 relative transition-all duration-300 ${isHovered ? "bg-white/20 backdrop-blur-sm" : "bg-primary/10"}`}
-                  >
+                    className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 relative transition-all duration-300 ${isHovered ? "bg-white/20 backdrop-blur-sm" : "bg-primary/10"}`}>
                     <service.icon
                       className={`w-8 h-8 transition-colors duration-300 ${isHovered ? "text-white" : "text-primary"}`}
                     />
@@ -227,21 +219,18 @@ export default function Services() {
                   {/* Stats badge */}
                   <div className="absolute top-6 right-6">
                     <div
-                      className={`text-xs font-bold px-3 py-1.5 rounded-full shadow-lg transition-all duration-300 ${isHovered ? "bg-white/20 text-white backdrop-blur-sm" : "bg-secondary text-white"}`}
-                    >
+                      className={`text-xs font-bold px-3 py-1.5 rounded-full shadow-lg transition-all duration-300 ${isHovered ? "bg-white/20 text-white backdrop-blur-sm" : "bg-secondary text-white"}`}>
                       {service.stats}
                     </div>
                   </div>
 
                   <h3
-                    className={`text-xl font-bold mb-4 transition-colors duration-300 ${isHovered ? "text-white drop-shadow-lg" : "text-dark"}`}
-                  >
+                    className={`text-xl font-bold mb-4 transition-colors duration-300 ${isHovered ? "text-white drop-shadow-lg" : "text-dark"}`}>
                     {service.title}
                   </h3>
 
                   <p
-                    className={`mb-6 leading-relaxed font-medium transition-colors duration-300 ${isHovered ? "text-white drop-shadow-md" : "text-gray-600"}`}
-                  >
+                    className={`mb-6 leading-relaxed font-medium transition-colors duration-300 ${isHovered ? "text-white drop-shadow-md" : "text-gray-600"}`}>
                     {service.description}
                   </p>
 
@@ -253,8 +242,7 @@ export default function Services() {
                           className={`w-1.5 h-1.5 rounded-full mr-3 transition-colors duration-300 ${isHovered ? "bg-white" : "bg-secondary"}`}
                         />
                         <span
-                          className={`transition-colors duration-300 font-medium ${isHovered ? "text-white drop-shadow-md" : "text-gray-700"}`}
-                        >
+                          className={`transition-colors duration-300 font-medium ${isHovered ? "text-white drop-shadow-md" : "text-gray-700"}`}>
                           {feature}
                         </span>
                       </li>
@@ -268,20 +256,17 @@ export default function Services() {
                       borderColor: isHovered
                         ? "rgba(255,255,255,0.2)"
                         : "rgba(229,231,235,1)",
-                    }}
-                  >
+                    }}>
                     <a
                       href="#contact"
                       aria-label="Learn More"
-                      className={`font-bold text-sm transition-colors inline-flex items-center ${isHovered ? "text-white drop-shadow-md" : "text-primary"}`}
-                    >
+                      className={`font-bold text-sm transition-colors inline-flex items-center ${isHovered ? "text-white drop-shadow-md" : "text-primary"}`}>
                       Learn More
                       <svg
                         className="w-4 h-4 ml-2"
                         fill="none"
                         stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
+                        viewBox="0 0 24 24">
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -303,8 +288,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 bg-gradient-to-br from-primary via-primary-dark to-primary-dark rounded-3xl p-10 md:p-14 relative overflow-hidden shadow-2xl"
-        >
+          className="mt-16 bg-gradient-to-br from-primary via-primary-dark to-primary-dark rounded-3xl p-10 md:p-14 relative overflow-hidden shadow-2xl">
           {/* Decorative background elements */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
@@ -336,8 +320,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 md:overflow-y-auto md:max-h-[600px]"
-              >
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 md:overflow-y-auto md:max-h-[600px]">
                 {/* HARDCOVER */}
                 <div className="mb-6">
                   <div className="flex items-center space-x-3 mb-4">
@@ -362,14 +345,12 @@ export default function Services() {
                     ].map((machine) => (
                       <li
                         key={machine}
-                        className="flex items-start space-x-3 group"
-                      >
+                        className="flex items-start space-x-3 group">
                         <div className="w-5 h-5 bg-secondary/20 rounded flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-secondary transition-colors">
                           <svg
                             className="w-3 h-3 text-secondary group-hover:text-white transition-colors"
                             fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
+                            viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -407,14 +388,12 @@ export default function Services() {
                     ].map((machine: string) => (
                       <li
                         key={machine}
-                        className="flex items-start space-x-3 group"
-                      >
+                        className="flex items-start space-x-3 group">
                         <div className="w-5 h-5 bg-secondary/20 rounded flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-secondary transition-colors">
                           <svg
                             className="w-3 h-3 text-secondary group-hover:text-white transition-colors"
                             fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
+                            viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -452,14 +431,12 @@ export default function Services() {
                     ].map((machine: string) => (
                       <li
                         key={machine}
-                        className="flex items-start space-x-3 group"
-                      >
+                        className="flex items-start space-x-3 group">
                         <div className="w-5 h-5 bg-secondary/20 rounded flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-secondary transition-colors">
                           <svg
                             className="w-3 h-3 text-secondary group-hover:text-white transition-colors"
                             fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
+                            viewBox="0 0 20 20">
                             <path
                               fillRule="evenodd"
                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -482,8 +459,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 relative h-64 md:h-[600px]"
-              >
+                className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 relative h-64 md:h-[600px]">
                 <MachineSlideshow />
               </motion.div>
             </div>
@@ -493,15 +469,13 @@ export default function Services() {
               <a
                 href="#contact"
                 aria-label="Request Service Quote"
-                className="inline-flex items-center space-x-2 bg-secondary hover:bg-secondary-dark text-white font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
-              >
+                className="inline-flex items-center space-x-2 bg-secondary hover:bg-secondary-dark text-white font-bold px-10 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg">
                 <span>Request Service Quote</span>
                 <svg
                   className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                  viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

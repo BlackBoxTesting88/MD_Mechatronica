@@ -1,22 +1,22 @@
-import { CheckCircle, Award } from 'lucide-react';
-import Image from 'next/image';
-import type { CSSProperties } from 'react';
-import mullerMartiniDiamantMc30 from '@/public/images/muller-martini-diamant-mc-30.webp';
-import futuristicMachineryInProductionLine from '@/public/images/futuristic-machinery-in-production-line.webp';
-import thoriumAPO0TCVHBv0Unsplash from '@/public/images/thorium-APO0TCVHBv0-unsplash.jpg';
-import shaminKmrzmnXJJ5oAZmnlIUnsplash from '@/public/images/shamin-kmrzmn-XJJ5oAZmnlI-unsplash.jpg';
+import { CheckCircle, Award } from "lucide-react";
+import Image from "next/image";
+import type { CSSProperties } from "react";
+import collibriImage from "@/public/images/Collibri.webp";
+import alegroSaudiArabiaImage from "@/public/images/Alegro_SaudiArabia.webp";
+import boleroInstallationImage from "@/public/images/Bolero_Installation.webp";
+import hoeraufBdmCompactImage from "@/public/images/Hoerauf_BDM_Compact.webp";
 
 const additionalServices = [
-  'We are able to repair also other machines',
-  'Programming',
-  'Modifications of existing lines',
+  "We are able to repair also other machines",
+  "Programming",
+  "Modifications of existing lines",
 ] as const;
 
 const features = [
-  'Certified technicians with 15+ years experience',
-  'Specialized in Müller Martini, Kolbus & Hörauf',
-  '24/7 emergency support across Europe',
-  'Comprehensive warranty on all services',
+  "Certified technicians with 15+ years experience",
+  "Specialized in Müller Martini, Kolbus & Hörauf",
+  "24/7 emergency support across Europe",
+  "Comprehensive warranty on all services",
 ] as const;
 
 export default function About() {
@@ -29,12 +29,14 @@ export default function About() {
               About MD Mechatronica
             </span>
             <h2 className="heading-lg mt-4 mb-6">
-              Leading Provider of <span className="text-primary">Industrial Machine</span> Services
+              Leading Provider of{" "}
+              <span className="text-primary">Industrial Machine</span> Services
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              MD Mechatronica, founded by Michał Dudek, is a trusted partner for companies across
-              Europe requiring professional maintenance, installation, and repair services for
-              complex industrial machinery.
+              MD Mechatronica, founded by Michał Dudek, is a trusted partner for
+              companies across Europe requiring professional maintenance,
+              installation, and repair services for complex industrial
+              machinery.
             </p>
 
             <div className="bg-gradient-to-br from-primary/5 to-secondary/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary/10">
@@ -43,8 +45,7 @@ export default function About() {
                   <div
                     key={service}
                     className="flex items-center space-x-3 about-stagger-item"
-                    style={{ '--about-index': index } as CSSProperties}
-                  >
+                    style={{ "--about-index": index } as CSSProperties}>
                     <div className="w-2 h-2 bg-secondary rounded-full" />
                     <span className="text-gray-700 font-medium">{service}</span>
                   </div>
@@ -57,8 +58,7 @@ export default function About() {
                 <div
                   key={feature}
                   className="flex items-start space-x-3 about-stagger-item"
-                  style={{ '--about-index': index } as CSSProperties}
-                >
+                  style={{ "--about-index": index } as CSSProperties}>
                   <CheckCircle
                     className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5"
                     aria-hidden
@@ -71,8 +71,7 @@ export default function About() {
             <a
               href="#contact"
               className="btn-primary inline-block"
-              aria-label="Go to contact section"
-            >
+              aria-label="Go to contact section">
               Work With Us
             </a>
           </div>
@@ -80,34 +79,42 @@ export default function About() {
           <div className="relative about-enter-right">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <div className="h-48 bg-gradient-to-br from-primary to-primary-dark rounded-xl overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-primary to-primary-dark rounded-xl overflow-hidden relative">
                   <Image
-                    src={mullerMartiniDiamantMc30}
-                    alt="Industrial machinery"
-                    className="w-full h-full object-cover"
+                    src={collibriImage}
+                    alt="Collibri machine"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <div className="h-64 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl overflow-hidden relative">
                   <Image
-                    src={futuristicMachineryInProductionLine}
-                    alt="Futuristic production line"
-                    className="w-full h-full object-cover"
+                    src={alegroSaudiArabiaImage}
+                    alt="Alegro installation in Saudi Arabia"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div className="h-64 bg-gradient-to-br from-primary-dark to-primary rounded-xl overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-primary-dark to-primary rounded-xl overflow-hidden relative">
                   <Image
-                    src={thoriumAPO0TCVHBv0Unsplash}
-                    alt="Technical service"
-                    className="w-full h-full object-cover"
+                    src={boleroInstallationImage}
+                    alt="Bolero installation"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <div className="h-48 bg-gradient-to-br from-secondary-dark to-secondary rounded-xl overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-secondary-dark to-secondary rounded-xl overflow-hidden relative">
                   <Image
-                    src={shaminKmrzmnXJJ5oAZmnlIUnsplash}
-                    alt="Installation work"
-                    className="w-full h-full object-cover"
+                    src={hoeraufBdmCompactImage}
+                    alt="Hörauf BDM Compact machine"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
               </div>

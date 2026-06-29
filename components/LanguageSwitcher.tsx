@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
-import { useRouter, usePathname } from '@/i18n/navigation';
-import { routing } from '@/i18n/routing';
+import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
+import { motion } from "framer-motion";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
 const languages = [
-  { locale: 'en' as const, flag: '/flags/UnitedKingdom.png' },
-  { locale: 'de' as const, flag: '/flags/Germany.png' },
-  { locale: 'pl' as const, flag: '/flags/Poland.png' },
+  { locale: "en" as const, flag: "/flags/UnitedKingdom.png" },
+  { locale: "de" as const, flag: "/flags/Germany.png" },
+  { locale: "pl" as const, flag: "/flags/Poland.png" },
 ];
 
 type LanguageSwitcherProps = {
@@ -21,7 +21,7 @@ export default function LanguageSwitcher({
   isScrolled = false,
   compact = false,
 }: LanguageSwitcherProps) {
-  const t = useTranslations('LanguageSwitcher');
+  const t = useTranslations("LanguageSwitcher");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -39,20 +39,19 @@ export default function LanguageSwitcher({
     <div
       className={`relative grid grid-cols-3 rounded-full p-1 ${
         isScrolled || compact
-          ? 'bg-gray-100/90 border border-gray-200/80'
-          : 'bg-white/15 border border-white/25 backdrop-blur-sm'
+          ? "bg-gray-100/90 border border-gray-200/80"
+          : "bg-white/15 border border-white/25 backdrop-blur-sm"
       }`}
       role="group"
-      aria-label="Language switcher"
-    >
+      aria-label="Language switcher">
       <motion.div
         className={`absolute top-1 bottom-1 rounded-full shadow-sm ${
-          isScrolled || compact ? 'bg-white' : 'bg-white/90'
+          isScrolled || compact ? "bg-white" : "bg-white/90"
         }`}
         initial={false}
         animate={{ x: `${safeIndex * 100}%` }}
-        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-        style={{ width: 'calc((100% - 0.5rem) / 3)', left: '0.25rem' }}
+        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        style={{ width: "calc((100% - 0.5rem) / 3)", left: "0.25rem" }}
       />
 
       {languages.map((lang) => {
@@ -68,13 +67,12 @@ export default function LanguageSwitcher({
             className={`relative z-10 flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-xs font-medium transition-colors sm:px-3 sm:text-sm ${
               isActive
                 ? isScrolled || compact
-                  ? 'text-primary'
-                  : 'text-primary'
+                  ? "text-primary"
+                  : "text-primary"
                 : isScrolled || compact
-                  ? 'text-gray-500 hover:text-gray-700'
-                  : 'text-white/80 hover:text-white'
-            }`}
-          >
+                  ? "text-gray-500 hover:text-gray-700"
+                  : "text-white/80 hover:text-white"
+            }`}>
             <Image
               src={lang.flag}
               alt=""
@@ -83,7 +81,7 @@ export default function LanguageSwitcher({
               className="h-4 w-4 rounded-full object-cover"
               aria-hidden
             />
-            <span className={compact ? 'hidden sm:inline' : 'hidden md:inline'}>
+            <span className={compact ? "hidden sm:inline" : "hidden md:inline"}>
               {t(lang.locale)}
             </span>
           </button>

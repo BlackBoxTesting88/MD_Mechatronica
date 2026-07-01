@@ -94,12 +94,12 @@ export default async function Footer() {
               {t("copyright", { year: currentYear })} {t("nip")}
             </p>
             <div className="flex flex-col items-center justify-center gap-2">
+              <p className="text-gray-400 text-sm">{t("developmentBy")}</p>
               <Image
                 src={blackBoxLogo}
                 alt={t("blackBoxAlt")}
-                className="h-[120px] lg:h-[180px] w-auto object-contain shrink-0 contrast-50"
+                className="h-[80px] lg:h-[100px] w-auto object-contain shrink-0 contrast-50"
               />
-              <p className="text-gray-400 text-sm">{t("developmentBy")}</p>
             </div>
           </div>
         </div>

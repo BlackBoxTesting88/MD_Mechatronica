@@ -1,7 +1,7 @@
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import logo from "@/public/logo.png";
+import logo from "@/public/FooterLogo.png";
 import blackBoxLogo from "@/public/black-box-logo1.png";
 
 const NAV_KEYS = ["home", "services", "about", "projects", "contact"] as const;
@@ -26,7 +26,7 @@ export default async function Footer() {
               <Image
                 src={logo}
                 alt={t("logoAlt")}
-                className="h-[120px] lg:h-[120px] w-auto object-contain mb-4"
+                className="h-[60px] md:h-[60px] w-auto object-contain mb-4"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">

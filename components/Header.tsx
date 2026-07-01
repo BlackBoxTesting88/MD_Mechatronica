@@ -5,6 +5,9 @@ import { Menu, X, Mail } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import HeaderBlackLogo from "@/public/Header_black_logo.png";
+import headerWhiteLogo from "@/public/HeaderWhiteLogo.png";
+import footerLogo from "@/public/FooterLogo.png";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -37,12 +40,11 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between gap-4">
           <Image
-            src="/logo.png"
+            src={isScrolled ? HeaderBlackLogo : footerLogo}
             alt="MD Mechatronica"
             width={200}
             height={200}
-            className="h-[120px] lg:h-[120px] w-auto object-contain transition-all duration-300 shrink-0"
-            style={{ filter: isScrolled ? "none" : "brightness(0) invert(1)" }}
+            className="h-[60px] lg:h-[50px] w-auto object-contain transition-all duration-300 shrink-0"
           />
 
           <nav className="hidden lg:flex items-center space-x-8">
@@ -52,7 +54,7 @@ export default function Header() {
                 href={item.href}
                 className={`font-medium transition-colors ${
                   isScrolled
-                    ? "text-gray-700 hover:text-primary"
+                    ? "text-white-700 hover:text-primary"
                     : "text-white hover:text-secondary"
                 }`}>
                 {item.label}

@@ -44,7 +44,7 @@ export default function Header() {
             alt="MD Mechatronica"
             width={200}
             height={200}
-            className="h-[60px] lg:h-[50px] w-auto object-contain transition-all duration-300 shrink-0"
+            className="w-[40%] lg:w-auto h-[60px] lg:h-[50px] object-contain transition-all duration-300 shrink-0"
           />
 
           <nav className="hidden lg:flex items-center space-x-8">

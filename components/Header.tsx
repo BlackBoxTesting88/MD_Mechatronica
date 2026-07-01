@@ -5,7 +5,7 @@ import { Menu, X, Mail } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import HeaderBlackLogo from "@/public/Header_black_logo.png";
+import HeaderBlackLogo from "@/public/header_black_logo.png";
 import headerWhiteLogo from "@/public/HeaderWhiteLogo.png";
 import footerLogo from "@/public/FooterLogo.png";
 

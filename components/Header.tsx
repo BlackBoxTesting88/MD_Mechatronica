@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import HeaderBlackLogo from "@/public/headerBlackLogo.png";
 // import headerWhiteLogo from "@/public/HeaderWhiteLogo.png";
-import footerLogo from "@/public/FooterLogo.png";
+import footerLogo from "@/public/HeaderWhiteLogo.png";
 
 export default function Header() {
   const t = useTranslations("Header");

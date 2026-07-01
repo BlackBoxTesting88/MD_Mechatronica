@@ -1,7 +1,7 @@
 import { Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import logo from "@/public/FooterLogo.png";
+import logo from "@/public/HeaderWhiteLogo.png";
 import blackBoxLogo from "@/public/black-box-logo1.png";
 
 const NAV_KEYS = ["home", "services", "about", "projects", "contact"] as const;

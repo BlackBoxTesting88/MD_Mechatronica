@@ -39,9 +39,9 @@
         "title": "Machine Service & Repair",
         "description": "Expert maintenance and repair of Müller Martini, Kolbus, and Hörauf printing machines. Fast response time and professional diagnostics.",
         "stats": "200+ repairs",
-        "feature1": "Hardcover machines",
-        "feature2": "Three-knife trimmers",
-        "feature3": "Binding systems"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "installation": {
         "title": "Installation & Dismantling",
@@ -55,9 +55,9 @@
         "title": "Replacement Parts",
         "description": "High-quality replacement parts for all major printing machine brands. Fast delivery and expert consultation.",
         "stats": "1000+ parts",
-        "feature1": "Original parts",
-        "feature2": "Quality alternatives",
-        "feature3": "Fast delivery"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "emergency": {
         "title": "Emergency Support",
@@ -133,10 +133,9 @@
     "additionalService1": "We are able to repair also other machines",
     "additionalService2": "Programming",
     "additionalService3": "Modifications of existing lines",
-    "feature1": "Certified technicians with 15+ years experience",
+    "feature1": "Certified technicians with 20+ years experience",
     "feature2": "Specialized in Müller Martini, Kolbus & Hörauf",
-    "feature3": "24/7 emergency support across Europe",
-    "feature4": "Comprehensive warranty on all services",
+    "feature3": "Comprehensive warranty on all services",
     "cta": "Work With Us",
     "ctaAria": "Go to contact section",
     "isoCertified": "Certified",

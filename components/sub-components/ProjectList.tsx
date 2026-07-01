@@ -56,9 +56,9 @@ export default function ProjectList({
                 <span className="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full">
                   {project.year}
                 </span>
-                <span className="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full">
+                {/* <span className="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full">
                   {project.client}
-                </span>
+                </span> */}
               </div>
             </div>
 

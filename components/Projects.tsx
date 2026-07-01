@@ -1,9 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import {
-  PROJECT_KEYS,
-  PROJECT_META,
-  type Project,
-} from "@/data/projectData";
+import { PROJECT_KEYS, PROJECT_META, type Project } from "@/data/projectData";
 import ProjectsInteractive from "./sub-components/ProjectsInteractive";
 
 export default async function Projects() {
@@ -16,7 +12,6 @@ export default async function Projects() {
     description: t(`items.${key}.description`),
     image: PROJECT_META[key].image,
     year: PROJECT_META[key].year,
-    client: PROJECT_META[key].client,
   }));
 
   return (
@@ -54,7 +49,7 @@ export default async function Projects() {
                   <p className="text-gray-600 text-sm">{t("statClients")}</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary mb-1">15+</p>
+                  <p className="text-3xl font-bold text-primary mb-1">20+</p>
                   <p className="text-gray-600 text-sm">{t("statYears")}</p>
                 </div>
               </div>

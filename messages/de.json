@@ -39,9 +39,9 @@
         "title": "Maschinenservice & Reparatur",
         "description": "Fachgerechte Wartung und Reparatur von Müller Martini-, Kolbus- und Hörauf-Druckmaschinen. Schnelle Reaktionszeit und professionelle Diagnose.",
         "stats": "200+ Reparaturen",
-        "feature1": "Hardcover-Maschinen",
-        "feature2": "Dreischneidemaschinen",
-        "feature3": "Binde-Systeme"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "installation": {
         "title": "Installation & Demontage",
@@ -55,9 +55,9 @@
         "title": "Ersatzteile",
         "description": "Hochwertige Ersatzteile für alle führenden Druckmaschinenmarken. Schnelle Lieferung und fachkundige Beratung.",
         "stats": "1000+ Teile",
-        "feature1": "Originalteile",
-        "feature2": "Qualitative Alternativen",
-        "feature3": "Schnelle Lieferung"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "emergency": {
         "title": "Notfall-Support",
@@ -135,8 +135,7 @@
     "additionalService3": "Modifikationen bestehender Linien",
     "feature1": "Zertifizierte Techniker mit über 15 Jahren Erfahrung",
     "feature2": "Spezialisiert auf Müller Martini, Kolbus & Hörauf",
-    "feature3": "24/7 Notfall-Support in ganz Europa",
-    "feature4": "Umfassende Garantie auf alle Dienstleistungen",
+    "feature3": "Umfassende Garantie auf alle Dienstleistungen",
     "cta": "Mit uns zusammenarbeiten",
     "ctaAria": "Zum Kontaktbereich",
     "isoCertified": "Zertifiziert",

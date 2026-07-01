@@ -22,7 +22,10 @@ const SERVICE_CONFIG: Record<
   { icon: React.ElementType; bgImage: string }
 > = {
   repair: { icon: Wrench, bgImage: "/images/Alegro_SaudiArabia.webp" },
-  installation: { icon: Settings, bgImage: "/images/Bolero_Installation_.webp" },
+  installation: {
+    icon: Settings,
+    bgImage: "/images/Bolero_Installation_.webp",
+  },
   parts: { icon: Package, bgImage: "/images/Bolero_Installation.webp" },
   emergency: { icon: Zap, bgImage: "/images/Collibri.webp" },
   preventive: { icon: Shield, bgImage: "/images/Diamant.webp" },
@@ -222,17 +225,22 @@ export default function Services() {
                   </p>
 
                   <ul className="space-y-2 mb-6">
-                    {features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full mr-3 transition-colors duration-300 ${isHovered ? "bg-white" : "bg-secondary"}`}
-                        />
-                        <span
-                          className={`transition-colors duration-300 font-medium ${isHovered ? "text-white drop-shadow-md" : "text-gray-700"}`}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
+                    {features.map(
+                      (feature) =>
+                        feature !== "" && (
+                          <li
+                            key={feature}
+                            className="flex items-center text-sm">
+                            <div
+                              className={`w-1.5 h-1.5 rounded-full mr-3 transition-colors duration-300 ${isHovered ? "bg-white" : "bg-secondary"}`}
+                            />
+                            <span
+                              className={`transition-colors duration-300 font-medium ${isHovered ? "text-white drop-shadow-md" : "text-gray-700"}`}>
+                              {feature}
+                            </span>
+                          </li>
+                        ),
+                    )}
                   </ul>
 
                   <div

@@ -16,7 +16,7 @@ const STAT_KEYS = ["projects", "clients", "years", "countries"] as const;
 const STAT_CONFIG = {
   projects: { icon: Building2, number: 500, suffix: "+" },
   clients: { icon: Users, number: 200, suffix: "+" },
-  years: { icon: Award, number: 15, suffix: "+" },
+  years: { icon: Award, number: 20, suffix: "+" },
   countries: { icon: Globe, number: 10, suffix: "+" },
 } as const;
 
@@ -81,7 +81,9 @@ export default function Stats() {
                 <p className="text-xl font-semibold text-gray-800 mb-1">
                   {t(`${key}Label`)}
                 </p>
-                <p className="text-gray-600 text-sm">{t(`${key}Description`)}</p>
+                <p className="text-gray-600 text-sm">
+                  {t(`${key}Description`)}
+                </p>
               </motion.div>
             );
           })}

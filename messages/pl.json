@@ -12,11 +12,11 @@
     "pl": "PL"
   },
   "Hero": {
-    "badge": "Profesjonalny serwis maszyn od 2010",
+    "badge": "Ponad 20 lat doświadczenia",
     "title": "Fachowa instalacja i",
     "titleHighlight": "konserwacja",
     "titleSuffix": "maszyn przemysłowych",
-    "description": "Specjalizujemy się w maszynach drukarskich Müller Martini, Kolbus i Hörauf. Oferujemy kompleksową instalację, naprawę i serwis w całej Europie z ponad 15-letnim doświadczeniem.",
+    "description": "Specjalizujemy się w maszynach Introligatorskich Müller Martini, Kolbus i Hörauf. Oferujemy kompleksową instalację, naprawę i serwis na całym świecie Europie z ponad 20-letnim doświadczeniem.",
     "ctaPrimary": "Rozpocznij",
     "ctaPrimaryAria": "Rozpocznij — przejdź do sekcji kontakt",
     "ctaSecondary": "Nasze usługi",
@@ -37,27 +37,27 @@
     "items": {
       "repair": {
         "title": "Serwis i naprawa maszyn",
-        "description": "Fachowa konserwacja i naprawa maszyn drukarskich Müller Martini, Kolbus i Hörauf. Szybki czas reakcji i profesjonalna diagnostyka.",
+        "description": "Fachowa konserwacja i naprawa maszyn introligatorskich Müller Martini, Kolbus i Hörauf. Szybki czas reakcji i profesjonalna diagnostyka.",
         "stats": "200+ napraw",
-        "feature1": "Maszyny do twardych okładek",
-        "feature2": "Gilotyny trójnożowe",
-        "feature3": "Systemy klejenia"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "installation": {
         "title": "Instalacja i demontaż",
         "description": "Profesjonalna instalacja i relokacja maszyn przemysłowych. Kompleksowe zarządzanie projektem od początku do końca.",
         "stats": "50+ instalacji",
-        "feature1": "Relokacja maszyn",
-        "feature2": "Konfiguracja techniczna",
-        "feature3": "Zgodność z normami BHP"
+        "feature1": "modernizacje",
+        "feature2": "przygotowanie do transportu",
+        "feature3": "załadunek do kontenerów morskich"
       },
       "parts": {
         "title": "Części zamienne",
         "description": "Wysokiej jakości części zamienne do wszystkich głównych marek maszyn drukarskich. Szybka dostawa i fachowe doradztwo.",
         "stats": "1000+ części",
-        "feature1": "Części oryginalne",
-        "feature2": "Alternatywy wysokiej jakości",
-        "feature3": "Szybka dostawa"
+        "feature1": "",
+        "feature2": "",
+        "feature3": ""
       },
       "emergency": {
         "title": "Wsparcie awaryjne",
@@ -86,10 +86,10 @@
     },
     "expertise": {
       "badge": "Nasza specjalizacja",
-      "title": "Konserwacja maszyn drukarskich Müller Martini",
+      "title": "Konserwacja maszyn Introligatorskich Müller Martini",
       "subtitle": "Serwisujemy wszystkie generacje i modele z fachową precyzją",
-      "hardcover": "Twarda okładka",
-      "trimmers": "Gilotyny",
+      "hardcover": "Twarda OPRAWA",
+      "trimmers": "Trójnoże",
       "binders": "Klejarki",
       "hardcoverMachines": [
         "Diamant (wszystkie generacje)",
@@ -135,8 +135,7 @@
     "additionalService3": "Modyfikacje istniejących linii",
     "feature1": "Certyfikowani technicy z ponad 15-letnim doświadczeniem",
     "feature2": "Specjalizacja w maszynach Müller Martini, Kolbus i Hörauf",
-    "feature3": "Całodobowe wsparcie awaryjne w całej Europie",
-    "feature4": "Kompleksowa gwarancja na wszystkie usługi",
+    "feature3": "Kompleksowa gwarancja na wszystkie usługi",
     "cta": "Współpracuj z nami",
     "ctaAria": "Przejdź do sekcji kontakt",
     "isoCertified": "Certyfikacja",

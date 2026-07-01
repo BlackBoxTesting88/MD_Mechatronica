@@ -16,12 +16,7 @@ export default async function About() {
     t("additionalService3"),
   ];
 
-  const features = [
-    t("feature1"),
-    t("feature2"),
-    t("feature3"),
-    t("feature4"),
-  ];
+  const features = [t("feature1"), t("feature2"), t("feature3")];
 
   return (
     <section id="about" className="section-padding bg-white">

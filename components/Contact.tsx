@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
+import PixelTransition from './PixelTransition';
 
 export default function Contact() {
   return (
@@ -50,12 +51,47 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Call QR Code</h3>
               
               <div className="flex flex-col items-center">
-                {/* QR Code Placeholder */}
-                <div className="bg-white rounded-2xl p-4 md:p-6 mb-6">
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=tel:+48666211626"
-                    alt="QR Code - Call us"
-                    className="w-48 h-48 md:w-64 md:h-64"
+                <div className="mb-6">
+                  <PixelTransition
+                    firstContent={
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', borderRadius: '15px' }}>
+                        <img
+                          src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=tel:+48666211626"
+                          alt="QR Code - Call us"
+                          style={{ width: '85%', height: '85%', objectFit: 'contain' }}
+                        />
+                      </div>
+                    }
+                    secondContent={
+                      <div
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          display: 'grid',
+                          placeItems: 'center',
+                          backgroundColor: '#111',
+                          borderRadius: '15px',
+                          padding: '1rem',
+                        }}
+                      >
+                        <div style={{ textAlign: 'center' }}>
+                          <p style={{ fontWeight: 900, fontSize: '1.25rem', color: '#ffffff', marginBottom: '0.5rem' }}>
+                            Email Us
+                          </p>
+                          <a
+                            href="mailto:office@md-mechatronica.com"
+                            style={{ fontWeight: 700, fontSize: '1rem', color: '#F59E0B', textDecoration: 'none', wordBreak: 'break-all' }}
+                          >
+                            office@md-mechatronica.com
+                          </a>
+                        </div>
+                      </div>
+                    }
+                    gridSize={8}
+                    pixelColor="#ffffff"
+                    once={false}
+                    animationStepDuration={0.4}
+                    className="custom-pixel-card"
                   />
                 </div>
                 
@@ -63,7 +99,7 @@ export default function Contact() {
                   Scan to Call Us Directly
                 </p>
                 <p className="text-gray-400 text-sm text-center">
-                  Point your camera at the QR code to instantly call us
+                  Hover over QR code to reveal email address
                 </p>
                 
                 <div className="mt-6 pt-6 border-t border-white/20 w-full">

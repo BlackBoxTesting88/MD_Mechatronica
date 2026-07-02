@@ -25,7 +25,7 @@ export default async function Home({ params }: Props) {
       <About />
       <Values />
       <Stats />
-      <Projects />
+      {/* <Projects /> */}
       <Contact />
       <Footer />
     </main>

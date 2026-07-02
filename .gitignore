@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+# Accidental Turbopack cache written with Windows-style paths
+C:\\Users/
+
 # production
 /build
 

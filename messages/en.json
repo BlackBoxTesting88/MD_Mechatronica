@@ -227,6 +227,7 @@
     "subtitle": "Contact us today and let's discuss how we can help with your machinery needs.",
     "qrTitle": "Quick Call QR Code",
     "qrAlt": "QR Code - Call us",
+    "qrDescription": "Hover over the QR code to view the email",
     "qrScanTitle": "Scan to Call Us Directly",
     "qrScanDescription": "Point your camera at the QR code to instantly call us",
     "qrEmergency": "Available 24/7 for emergencies",

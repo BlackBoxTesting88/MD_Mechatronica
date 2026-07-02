@@ -1,10 +1,9 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import { gsap } from 'gsap';
-import './PixelTransition.css';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
-interface PixelTransitionProps {
+type PixelTransitionProps = {
   firstContent: React.ReactNode;
   secondContent: React.ReactNode;
   gridSize?: number;
@@ -14,9 +13,20 @@ interface PixelTransitionProps {
   aspectRatio?: string;
   className?: string;
   style?: React.CSSProperties;
+};
+
+function shuffleIndices(count: number): number[] {
+  const indices = Array.from({ length: count }, (_, index) => index);
+
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+
+  return indices;
 }
 
-function PixelTransition({
+export default function PixelTransition({
   firstContent,
   secondContent,
   gridSize = 7,
@@ -25,124 +35,167 @@ function PixelTransition({
   once = false,
   aspectRatio = '100%',
   className = '',
-  style = {}
+  style,
 }: PixelTransitionProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const pixelGridRef = useRef<HTMLDivElement>(null);
-  const activeRef = useRef<HTMLDivElement>(null);
-  const delayedCallRef = useRef<gsap.core.Tween | null>(null);
-
-  const [isActive, setIsActive] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const [phase, setPhase] = useState<'idle' | 'cover' | 'uncover'>('idle');
+  const [order, setOrder] = useState<number[]>([]);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const animationRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const prefersReducedMotion = useReducedMotion();
+
+  const totalPixels = gridSize * gridSize;
+  const stagger = animationStepDuration / totalPixels;
+  const cellSize = 100 / gridSize;
+
+  const pixels = useMemo(
+    () =>
+      Array.from({ length: totalPixels }, (_, index) => ({
+        index,
+        row: Math.floor(index / gridSize),
+        col: index % gridSize,
+      })),
+    [gridSize, totalPixels]
+  );
 
   useEffect(() => {
     setIsTouchDevice(
       'ontouchstart' in window ||
-      navigator.maxTouchPoints > 0 ||
-      window.matchMedia('(pointer: coarse)').matches
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia('(pointer: coarse)').matches
     );
   }, []);
 
-  useEffect(() => {
-    const pixelGridEl = pixelGridRef.current;
-    if (!pixelGridEl) return;
+  const clearAnimations = useCallback(() => {
+    animationRef.current.forEach(clearTimeout);
+    animationRef.current = [];
+  }, []);
 
-    pixelGridEl.innerHTML = '';
+  useEffect(() => clearAnimations, [clearAnimations]);
 
-    for (let row = 0; row < gridSize; row++) {
-      for (let col = 0; col < gridSize; col++) {
-        const pixel = document.createElement('div');
-        pixel.classList.add('pixelated-image-card__pixel');
-        pixel.style.backgroundColor = pixelColor;
+  const schedule = useCallback((fn: () => void, delayMs: number) => {
+    const id = setTimeout(fn, delayMs);
+    animationRef.current.push(id);
+  }, []);
 
-        const size = 100 / gridSize;
-        pixel.style.width = `${size}%`;
-        pixel.style.height = `${size}%`;
-        pixel.style.left = `${col * size}%`;
-        pixel.style.top = `${row * size}%`;
-        pixelGridEl.appendChild(pixel);
+  const animateTo = useCallback(
+    (activate: boolean) => {
+      clearAnimations();
+
+      if (prefersReducedMotion) {
+        setRevealed(activate);
+        setPhase('idle');
+        setOrder([]);
+        return;
       }
+
+      setOrder(shuffleIndices(totalPixels));
+      setPhase('cover');
+
+      schedule(() => {
+        setRevealed(activate);
+        setPhase('uncover');
+      }, animationStepDuration * 1000);
+
+      schedule(() => {
+        setPhase('idle');
+        setOrder([]);
+      }, animationStepDuration * 2000);
+    },
+    [
+      animationStepDuration,
+      clearAnimations,
+      prefersReducedMotion,
+      schedule,
+      totalPixels,
+    ]
+  );
+
+  const handleActivate = () => {
+    if (!revealed && phase === 'idle') {
+      animateTo(true);
     }
-  }, [gridSize, pixelColor]);
+  };
 
-  const animatePixels = (activate: boolean) => {
-    setIsActive(activate);
-
-    const pixelGridEl = pixelGridRef.current;
-    const activeEl = activeRef.current;
-    if (!pixelGridEl || !activeEl) return;
-
-    const pixels = pixelGridEl.querySelectorAll('.pixelated-image-card__pixel');
-    if (!pixels.length) return;
-
-    gsap.killTweensOf(pixels);
-    if (delayedCallRef.current) {
-      delayedCallRef.current.kill();
+  const handleDeactivate = () => {
+    if (revealed && !once && phase === 'idle') {
+      animateTo(false);
     }
-
-    gsap.set(pixels, { display: 'none' });
-
-    const totalPixels = pixels.length;
-    const staggerDuration = animationStepDuration / totalPixels;
-
-    gsap.to(pixels, {
-      display: 'block',
-      duration: 0,
-      stagger: {
-        each: staggerDuration,
-        from: 'random'
-      }
-    });
-
-    delayedCallRef.current = gsap.delayedCall(animationStepDuration, () => {
-      activeEl.style.display = activate ? 'block' : 'none';
-      activeEl.style.pointerEvents = activate ? 'none' : '';
-    });
-
-    gsap.to(pixels, {
-      display: 'none',
-      duration: 0,
-      delay: animationStepDuration,
-      stagger: {
-        each: staggerDuration,
-        from: 'random'
-      }
-    });
   };
 
-  const handleEnter = () => {
-    if (!isActive) animatePixels(true);
-  };
-  const handleLeave = () => {
-    if (isActive && !once) animatePixels(false);
-  };
   const handleClick = () => {
-    if (!isActive) animatePixels(true);
-    else if (isActive && !once) animatePixels(false);
+    if (phase !== 'idle') return;
+
+    if (!revealed) {
+      animateTo(true);
+      return;
+    }
+
+    if (!once) {
+      animateTo(false);
+    }
+  };
+
+  const getPixelDelay = (pixelIndex: number) => {
+    const position = order.indexOf(pixelIndex);
+    if (position === -1) return 0;
+
+    if (phase === 'cover') {
+      return position * stagger;
+    }
+
+    if (phase === 'uncover') {
+      return animationStepDuration + position * stagger;
+    }
+
+    return 0;
   };
 
   return (
     <div
-      ref={containerRef}
-      className={`pixelated-image-card ${className}`}
+      className={`relative w-[300px] max-w-full overflow-hidden rounded-[15px] border-2 border-white bg-[#222] ${className}`}
       style={style}
-      onMouseEnter={!isTouchDevice ? handleEnter : undefined}
-      onMouseLeave={!isTouchDevice ? handleLeave : undefined}
+      onMouseEnter={!isTouchDevice ? handleActivate : undefined}
+      onMouseLeave={!isTouchDevice ? handleDeactivate : undefined}
       onClick={isTouchDevice ? handleClick : undefined}
-      onFocus={!isTouchDevice ? handleEnter : undefined}
-      onBlur={!isTouchDevice ? handleLeave : undefined}
-      tabIndex={0}
-    >
-      <div style={{ paddingTop: aspectRatio }} />
-      <div className="pixelated-image-card__default" aria-hidden={isActive}>
+      onFocus={!isTouchDevice ? handleActivate : undefined}
+      onBlur={!isTouchDevice ? handleDeactivate : undefined}
+      tabIndex={0}>
+      <div style={{ paddingTop: aspectRatio }} aria-hidden />
+
+      <div className="absolute inset-0" aria-hidden={revealed}>
         {firstContent}
       </div>
-      <div className="pixelated-image-card__active" ref={activeRef} aria-hidden={!isActive}>
+
+      <div
+        className={`absolute inset-0 z-[2] ${revealed ? 'block' : 'hidden'}`}
+        aria-hidden={!revealed}>
         {secondContent}
       </div>
-      <div className="pixelated-image-card__pixels" ref={pixelGridRef} />
+
+      <div className="pointer-events-none absolute inset-0 z-[3]">
+        {pixels.map(({ index, row, col }) => (
+          <motion.div
+            key={index}
+            className="absolute"
+            style={{
+              backgroundColor: pixelColor,
+              width: `${cellSize}%`,
+              height: `${cellSize}%`,
+              left: `${col * cellSize}%`,
+              top: `${row * cellSize}%`,
+            }}
+            initial={false}
+            animate={{
+              opacity: phase === 'cover' ? 1 : 0,
+            }}
+            transition={{
+              duration: 0,
+              delay: getPixelDelay(index),
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
-
-export default PixelTransition;

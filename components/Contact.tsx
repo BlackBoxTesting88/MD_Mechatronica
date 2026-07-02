@@ -47,38 +47,31 @@ export default function Contact() {
                   {t("qrTitle")}
                 </h3>
 
+                <p className="text-gray-400 text-sm text-center mb-6">
+                  {t("qrDescription")}
+                </p>
+
                 <div className="flex flex-col items-center">
                   <div className="mb-6">
                     <PixelTransition
                       firstContent={
-                        <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', borderRadius: '15px' }}>
+                        <div className="flex h-full w-full items-center justify-center rounded-[15px] bg-white">
                           <img
                             src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=tel:+48666211626"
                             alt={t("qrAlt")}
-                            style={{ width: '85%', height: '85%', objectFit: 'contain' }}
+                            className="h-[85%] w-[85%] object-contain"
                           />
                         </div>
                       }
                       secondContent={
-                        <div
-                          style={{
-                            width: '100%',
-                            height: '100%',
-                            display: 'grid',
-                            placeItems: 'center',
-                            backgroundColor: '#111',
-                            borderRadius: '15px',
-                            padding: '1rem',
-                          }}
-                        >
-                          <div style={{ textAlign: 'center' }}>
-                            <p style={{ fontWeight: 900, fontSize: '1.25rem', color: '#ffffff', marginBottom: '0.5rem' }}>
-                              Email Us
+                        <div className="grid h-full w-full place-items-center rounded-[15px] bg-[#111] p-4">
+                          <div className="text-center">
+                            <p className="mb-2 text-xl font-black text-white">
+                              {t("sendEmail")}
                             </p>
                             <a
                               href="mailto:office@md-mechatronica.com"
-                              style={{ fontWeight: 700, fontSize: '1rem', color: '#F59E0B', textDecoration: 'none', wordBreak: 'break-all' }}
-                            >
+                              className="break-all text-base font-bold text-secondary no-underline">
                               office@md-mechatronica.com
                             </a>
                           </div>
@@ -88,7 +81,6 @@ export default function Contact() {
                       pixelColor="#ffffff"
                       once={false}
                       animationStepDuration={0.4}
-                      className="custom-pixel-card"
                     />
                   </div>
 

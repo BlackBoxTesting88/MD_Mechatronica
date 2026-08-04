@@ -12,11 +12,11 @@
     "pl": "PL"
   },
   "Hero": {
-    "badge": "Ponad 20 lat doświadczenia",
+    "badge": "Ponad 15 lat doświadczenia",
     "title": "Fachowa instalacja i",
     "titleHighlight": "konserwacja",
     "titleSuffix": "maszyn przemysłowych",
-    "description": "Specjalizujemy się w maszynach Introligatorskich Müller Martini, Kolbus i Hörauf. Oferujemy kompleksową instalację, naprawę i serwis na całym świecie z ponad 20-letnim doświadczeniem.",
+    "description": "Specjalizujemy się w maszynach Introligatorskich Müller Martini, Kolbus i Hörauf. Oferujemy kompleksową instalację, naprawę i serwis na całym świecie z ponad 15-letnim doświadczeniem.",
     "ctaPrimary": "Rozpocznij",
     "ctaPrimaryAria": "Rozpocznij — przejdź do sekcji kontakt",
     "ctaSecondary": "Nasze usługi",
@@ -234,7 +234,7 @@
     "sendEmail": "Wyślij e-mail",
     "emailResponse": "Odpowiemy w ciągu 24 godzin",
     "visitOffice": "Adres:",
-    "addressLine1": "Ul. Przedwiośnia 23",
+    "addressLine1": "Ul. Przedwiośnia 23/8",
     "addressLine2": "05-500 Piaseczno",
     "addressLine3": "Polska",
     "bottomCta": "Potrzebujesz natychmiastowej pomocy? Zeskanuj kod QR powyżej, aby zadzwonić bezpośrednio.",

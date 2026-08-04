@@ -6,6 +6,9 @@ import { useTranslations } from "next-intl";
 import ContactForm from "@/components/contact/ContactForm";
 import PixelTransition from "./PixelTransition";
 
+const QR_PHONE_NUMBER = "+48666211626";
+const QR_CODE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(`tel:${QR_PHONE_NUMBER}`)}`;
+
 export default function Contact() {
   const t = useTranslations("Contact");
 
@@ -57,7 +60,7 @@ export default function Contact() {
                       firstContent={
                         <div className="flex h-full w-full items-center justify-center rounded-[15px] bg-white">
                           <img
-                            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=tel:+48666211626"
+                            src={QR_CODE_URL}
                             alt={t("qrAlt")}
                             className="h-[85%] w-[85%] object-contain"
                           />

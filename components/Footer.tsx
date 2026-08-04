@@ -53,7 +53,7 @@ export default async function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{t("contactInfo")}</h4>
             <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
+              {/* <li className="flex items-start space-x-3">
                 <Mail
                   className="w-5 h-5 text-secondary flex-shrink-0 mt-1"
                   aria-label={t("emailIconAria")}
@@ -67,7 +67,7 @@ export default async function Footer() {
                     office@md-mechatronica.com
                   </a>
                 </div>
-              </li>
+              </li> */}
               <li className="flex items-start space-x-3">
                 <MapPin
                   className="w-5 h-5 text-secondary flex-shrink-0 mt-1"

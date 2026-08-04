@@ -115,8 +115,8 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}>
             <div className="bg-gradient-to-br from-secondary/20 to-secondary/5 backdrop-blur-lg border border-secondary/30 rounded-2xl p-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="flex flex-col items-center text-center group">
+              <div className="">
+                {/* <div className="flex flex-col items-center text-center group">
                   <div className="w-16 h-16 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary transition-all duration-300">
                     <Mail className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
                   </div>
@@ -129,7 +129,7 @@ export default function Contact() {
                   <p className="text-gray-400 text-xs mt-2">
                     {t("emailResponse")}
                   </p>
-                </div>
+                </div> */}
 
                 <div className="flex flex-col items-center text-center group">
                   <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-secondary transition-all duration-300">

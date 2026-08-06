@@ -296,5 +296,13 @@
     "nip": "NIP: 5272245741",
     "blackBoxAlt": "Black Box",
     "developmentBy": "Entwicklung von:"
+  },
+  "Metadata": {
+    "title": "MD Mechatronica | Professioneller Druckmaschinen-Service",
+    "description": "Fachgerechte Installation, Wartung und Reparatur von Müller Martini-, Kolbus- und Hörauf-Druckmaschinen. Professioneller Industriemaschinen-Service in Europa.",
+    "ogTitle": "MD Mechatronica - Professioneller Druckmaschinen-Service",
+    "ogDescription": "Installation, Wartung und Reparatur von Industriedruckmaschinen in ganz Europa.",
+    "ogImageAlt": "MD Mechatronica Logo",
+    "structuredDataDescription": "Professionelle Installations-, Wartungs- und Reparaturdienstleistungen für Müller Martini-, Kolbus- und Hörauf-Druckmaschinen in Europa."
   }
 }

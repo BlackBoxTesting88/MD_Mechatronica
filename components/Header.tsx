@@ -26,7 +26,7 @@ export default function Header() {
     { label: t("home"), href: "#home" },
     { label: t("services"), href: "#services" },
     { label: t("about"), href: "#about" },
-    { label: t("projects"), href: "#projects" },
+    // { label: t("projects"), href: "#projects" },
     { label: t("contact"), href: "#contact" },
   ];
 

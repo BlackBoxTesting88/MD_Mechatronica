@@ -145,6 +145,8 @@ export default function Contact() {
                     {t("addressLine1")}
                     <br />
                     {t("addressLine2")}
+                    {/* <br /> */}
+                    {/* {t("streetNumber")} */}
                     <br />
                     {t("addressLine3")}
                   </p>

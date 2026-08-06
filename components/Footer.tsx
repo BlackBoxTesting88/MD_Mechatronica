@@ -79,6 +79,8 @@ export default async function Footer() {
                     {t("addressLine1")}
                     <br />
                     {t("addressLine2")}
+                    <br />
+                    {t("streetNumber")}
                   </p>
                 </div>
               </li>
